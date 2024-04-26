@@ -1,4 +1,3 @@
-
 /*
 This CSS governs the appearance of our site.
 You can find the basic concepts of CSS here: https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/How_CSS_works
@@ -329,4 +328,43 @@ nav + .title-image {
 	position: absolute;
 	top: 8px;
 	left: 16px;
+}
+
+/* Main styles */
+.sketches {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    margin-top: 3rem;
+    padding: 0 2rem;
+}
+
+.sketch {
+    width: 30%; /* Adjust as needed */
+    text-align: center;
+}
+
+.sketch img {
+    width: 100%; /* Make all images fill their container */
+    height: auto; /* Maintain aspect ratio */
+    border-radius: 8px; /* Add rounded corners for aesthetics */
+}
+
+.sketch p {
+    margin-top: 1rem; /* Add space between image and description */
+    font-size: 1rem; /* Adjust font size */
+    color: var(--blue-shade-2); /* Use theme color for text */
+}
+
+/* Adjustments for responsiveness */
+@media screen and (max-width: 768px) {
+    .sketches {
+        flex-direction: column; /* Stack images on top of each other */
+        align-items: center;
+    }
+    
+    .sketch {
+        width: 80%; /* Make images take up more space on smaller screens */
+        margin-bottom: 2rem; /* Add space between images */
+    }
 }
