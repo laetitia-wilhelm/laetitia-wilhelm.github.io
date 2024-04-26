@@ -1,13 +1,11 @@
 **Data Vizualisation**
 
-This website is made in the frame of the course 
+Color Palette:
+'#00429d', '#2378a2', '#44ada7', '#8bdcba', '#ffffe0', '#ffda12', '#ffab00', '#ff7400', '#ff0000'
+
+blue -> yellow -> red
 
 
-
-Color Palette
-
-Hue (color) :
-S (saturation) :
-B (brightness) : need to be close
-
-Basis color: gold
+Image sources:
+Olympic runner PNG : Marcomogollon - Wikipedia
+First page image: Tokyo 2020 -youtube channel
