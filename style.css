@@ -49,9 +49,41 @@ html, body, figure {
 
 /* Default font and size */
 body {
-	font-family: sans-serif;
+	font-family: Arial, Helvetica, sans-serif;
 	font-size: 1.1rem;
 }
+
+#showcase{
+	margin-top: 3.5rem;
+	background-image: url(images/lightningLarge.jpg);
+	height: 93vh;
+	background-size:cover;
+	background-position:center;
+	height:100vh;
+	display:flex;
+	/* change disposition of the text*/
+	flex-direction:column;
+	justify-content:center;
+	align-items:center;
+	text-align:center;
+	/*avoid text superposition when the screen is small*/
+	padding:0 20px;
+}
+
+
+#showcase h1{
+	position: absolute;
+    top: calc(22% - 25px); 
+    left: 50%;
+    transform: translateX(-50%);
+    font-size: 70px;
+	font-style: italic;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 0 0.6rem black; 
+}
+
+
 
 /*
 It is easier to read if the text is not too wide, so we limit the width.
@@ -61,7 +93,7 @@ The various units of measurement available in CSS:
 	https://developer.mozilla.org/en-US/docs/Learn/CSS/Introduction_to_CSS/Values_and_units
 */
 .width-limited {
-	max-width: 70rem;
+	max-width: 75%;
 
 	/* Center horizontally: */
 	margin-left: auto;
@@ -93,7 +125,8 @@ h4 { font-size: 1.25rem; }
 /* Top navigation bar */
 nav {
     position: fixed; /* Fix the position of the navigation bar */
-	width: 110%;
+	height: 6vh;
+	width: 100%;
 	z-index: 1000; /* Ensure it appears above other content */
 	top:0; /*ensure it is a the top of the viewport*/
 	padding-top: 1rem;
@@ -101,6 +134,9 @@ nav {
 
 	background-color: var(--white-shade);
 	box-shadow: 0px 2px 4px var(--yellow-shade-4); /* Add a subtle box shadow */
+
+	background-size:cover;
+	background-position:center;
 }
 
 /* Make the links in the navbar bold */
@@ -115,6 +151,8 @@ nav ul {
 	margin: 0;
 	padding: 0;
 
+	/*to be aligned on the right with the text*/
+	margin-right: calc((100% - 75%) / 2);
 	/* Remove list bullet points */
 	list-style-type: none;
 
@@ -130,7 +168,7 @@ nav ul {
 
 /* Space between links */
 nav li {
-	margin-right: 3rem;
+	margin-left: 3rem;
 }
 
 nav a:hover {
@@ -145,7 +183,8 @@ nav img {
 	height: 45px; /* Adjust height as needed */
 	width: auto;
     margin-right: 10px; /* Add some spacing between the image and the links */
-    margin-left: 20px; /* Adjust the left margin as desired */
+    /*margin-left: 100px; /* Adjust the left margin as desired */
+	margin-left: calc(0.6*(100% - 70%) / 2);
     position: absolute; /* Position the image absolutely within the navigation bar */
     left: 30px; /* Position the image from the left edge of the navigation bar */
 	top:4px;
@@ -184,23 +223,12 @@ nav img {
 /*Main image*/
 .title-image {
 	/*margin-top: 60px; /*same as for navigation bar*/
-	margin-left: 0;
-	width: 100%; /* Make it span the entire width of the viewport */
-	/* Center the title using flexbox */
+	height: 100vh;
+	position: relative;
 	display: flex;
 	justify-content: center;
 	align-items: center;
 }
-
-/* Image credits */
-.image-credits{
-	position: absolute; /* Position the credits absolutely */
-    bottom: 0; /* Align the credits with the bottom of the viewport */
-    width: 100%; /* Make it span the entire width of the viewport */
-    text-align: center; /* Center-align the text */
-    background-color: rgba(255, 255, 255, 0.8); /* Semi-transparent white background */
-}
-
 
 
 .box {
@@ -212,7 +240,10 @@ nav img {
 	background-color: var(--blue-shade-3b);
 
 	border: 2px solid var(--blue-shade-3);
-	border-radius: 2rem;
+	border-radius: 1rem;
+
+	text-shadow: white 0 0 0.6rem;
+
 }
 
 .viz-row {
@@ -225,19 +256,77 @@ nav img {
 	padding-top: 2rem;
 	padding-bottom: 2rem;
 
-	background-color: var(--blue-shade-3)
+	background-color: var(#85bf8397);
 }
 
 figure embed {
 	width: 100%;
 }
 
-footer {
-	padding-bottom: 5rem;
+#page-container {
+	position: relative;
+	min-height: 20vh;
 }
+
+#content-wrap {
+	padding-bottom: 20vh;    /* Footer height */
+	background: var(--blue-shade-2);
+
+}
+
+#footer {
+	position: absolute;
+	bottom: 0;
+	width: 100%;
+	/* Footer height */
+	height: 1 rem;          
+	color: white;
+	text-align: center;
+}
+
+.footer-content{
+	display: flex;
+	align-items: center;
+	justify-content: center;
+	flex-direction: column;
+	color: #ffffe0;
+}
+
+.footer-content h3{
+	font-size: 1.8rem;
+	font-weight: 400;
+	color: #ffffe0;
+}
+
+
 
 /* Adjust the top margin to position it below the title
 ensure everything is below the title exect title image*/
 .title-row + *:not(.title-image) {
 	    margin-top: 5rem;
+}
+
+nav + .title-image {
+	margin-top: 3.5rem;
+}
+
+
+
+/* text on images*/
+
+
+.container {
+	font-family: "GFS Neohellenic";
+	font-size: 80px;
+	font-style: italic;
+	position: relative;
+	text-align: left;
+	color: white;
+  }
+
+
+.top-left {
+	position: absolute;
+	top: 8px;
+	left: 16px;
 }
