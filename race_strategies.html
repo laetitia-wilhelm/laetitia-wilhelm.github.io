@@ -77,14 +77,17 @@
 
         // Function to sort athletes by split times
         function sortBySplitTimes(athleteNames, splitTimes) {
-            let totalTime = calculateTotalTime(splitTimes);
-            let sortedIndexes = totalTime.map((time, index) => [time, index])
-                                        .sort((a, b) => a[0] - b[0])
-                                        .map(item => item[1]);
+            let sortedIndexes = Array.from({ length: splitTimes[0].length - 1 }, (_, i) => i + 1); // Create an array [1, 2, ..., n] for the split times
+            sortedIndexes.sort((a, b) => { // Sort the split times indexes based on the last split time
+                let aTime = parseFloat(splitTimes[a][splitTimes[a].length - 1]);
+                let bTime = parseFloat(splitTimes[b][splitTimes[b].length - 1]);
+                return aTime - bTime;
+            });
             let sortedAthleteNames = sortedIndexes.map(index => athleteNames[index]);
             let sortedSplitTimes = sortedIndexes.map(index => splitTimes[index]);
             return [sortedAthleteNames, sortedSplitTimes];
         }
+
 
         // Call the function to get sorted athlete names and split times
         var [sortedAthleteNames, sortedSplitTimes] = sortBySplitTimes(athleteNames, splitTimes);
