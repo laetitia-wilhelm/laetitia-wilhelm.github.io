@@ -47,9 +47,9 @@
     <script>
         // Parse the split times data from the Excel file
         var athleteNames = ["INGEBRIGTSEN Jakob", "CHERUIYOT Timothy", "KERR Josh", "KIPSANG Abel", "MECHAAL Adel", "HOCKER Cole", "McSWEYN Stewart", "ROZMYS Michal", "HEYWARD Jake", "WIGHTMAN Jake", "HOARE Oliver", "GRETHEN Charles", "FONTES Ignacio"];
-        var splitTimes = [['14.1', '42.0', '1:10.5', '1:38.2', '2:06.1', '2:33.9', '3:01.2', '3:28.32'],
-                          ['14.2', '42.2', '1:10.3', '1:37.9', '2:05.8', '2:33.6', '3:01.0', '3:29.01'],
-                          ['13.8', '42.9', '1:11.3', '1:39.2', '2:07.2', '2:34.9', '3:01.9', '3:29.05'],
+        var splitTimes = [['14.1', '27.8', '42.0', '56.2', '1:10.5', '1:24.3', '1:38.2', '1:52.0', '2:06.1', '2:20.0', '2:33.9', '2:47.5', '3:01.2', '3:14.7', '3:28.32'],
+                          ['14.2', '28.3', '42.2', '56.4', '1:10.3', '1:24.0', '1:37.9', '1:51.8', '2:05.8', '2:19.7', '2:33.6', '2:47.3', '3:01.0', '3:14.9', '3:29.01'],
+                          ['13.8', '28.7', '42.9', '57.3', '1:11.3', '1:25.3', '1:39.2', '1:53.2', '2:07.2', '2:21.3', '2:34.9', '2:48.4', '3:01.9', '3:15.4', '3:29.05'],
                           // Add split times for other athletes here
                          ];
 
@@ -57,7 +57,7 @@
         var traces = [];
         for (var i = 0; i < athleteNames.length; i++) {
             var trace = {
-                x: ['100m', '400m', '700m', '1000m', '1300m', '1600m', '1900m', '2200m'],
+                x: ['100m', '200m', '300m', '400m', '500m', '600m', '700m', '800m', '900m', '1000m', '1100m', '1200m', '1300m', '1400m', 'Race End'],
                 y: splitTimes[i],
                 mode: 'lines+markers',
                 name: athleteNames[i]
