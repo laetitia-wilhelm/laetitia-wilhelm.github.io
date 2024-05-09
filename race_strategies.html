@@ -62,17 +62,45 @@
                           ['0','13.6', '28.2', '42.6', '57.1', '1:11.6', '1:25.9', '1:40.1', '1:54.4', '2:08.9', '2:23.6', '2:38.5', '2:53.0', '3:08.0', '3:23.3', '3:38.56']
                          ];
 
+        // Function to calculate total time from split times
+        function calculateTotalTime(splitTimes) {
+            let totalTime = [];
+            splitTimes.forEach(split => {
+                let total = 0;
+                split.forEach(time => {
+                    total += parseFloat(time);
+                });
+                totalTime.push(total);
+            });
+            return totalTime;
+        }
+
+        // Function to sort athletes by split times
+        function sortBySplitTimes(athleteNames, splitTimes) {
+            let totalTime = calculateTotalTime(splitTimes);
+            let sortedIndexes = totalTime.map((time, index) => [time, index])
+                                        .sort((a, b) => a[0] - b[0])
+                                        .map(item => item[1]);
+            let sortedAthleteNames = sortedIndexes.map(index => athleteNames[index]);
+            let sortedSplitTimes = sortedIndexes.map(index => splitTimes[index]);
+            return [sortedAthleteNames, sortedSplitTimes];
+        }
+
+        // Call the function to get sorted athlete names and split times
+        var [sortedAthleteNames, sortedSplitTimes] = sortBySplitTimes(athleteNames, splitTimes);
+
         // Create traces for each athlete
         var traces = [];
-        for (var i = 0; i < athleteNames.length; i++) {
+        for (var i = 0; i < sortedAthleteNames.length; i++) {
             var trace = {
                 x: ['0m','100m', '200m', '300m', '400m', '500m', '600m', '700m', '800m', '900m', '1000m', '1100m', '1200m', '1300m', '1400m', '1500m'],
-                y: splitTimes[i],
+                y: sortedSplitTimes[i],
                 mode: 'lines+markers',
-                name: athleteNames[i]
+                name: sortedAthleteNames[i]
             };
             traces.push(trace);
         }
+
 
         // Layout for the chart
         var layout = {
