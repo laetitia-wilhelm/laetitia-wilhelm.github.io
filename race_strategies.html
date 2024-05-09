@@ -61,19 +61,7 @@
                           ['0','14.0', '29.0', '43.2', '57.5', '1:11.9', '1:26.0', '1:39.8', '1:54.0', '2:08.3', '2:22.9', '2:37.3', '2:51.6', '3:06.3', '3:21.1', '3:36.80'],
                           ['0','13.6', '28.2', '42.6', '57.1', '1:11.6', '1:25.9', '1:40.1', '1:54.4', '2:08.9', '2:23.6', '2:38.5', '2:53.0', '3:08.0', '3:23.3', '3:38.56']
                          ];
-    
-        // Rearrange splitTimes to have the slowest athlete at each split on top and fastest at the bottom
-        for (var i = 0; i < splitTimes[0].length; i++) {
-            var columnData = [];
-            for (var j = 0; j < splitTimes.length; j++) {
-                columnData.push(parseFloat(splitTimes[j][i]));
-            }
-            columnData.sort(function(a, b) { return b - a; });
-            for (var j = 0; j < splitTimes.length; j++) {
-                splitTimes[j][i] = columnData[j].toFixed(2);
-            }
-        }
-    
+
         // Create traces for each athlete
         var traces = [];
         for (var i = 0; i < athleteNames.length; i++) {
@@ -85,22 +73,21 @@
             };
             traces.push(trace);
         }
-    
+
         // Layout for the chart
         var layout = {
             title: 'Athlete Split Times',
             xaxis: {
-                title: 'Distance (m)'
+                title: 'Distance'
             },
             yaxis: {
                 title: 'Time (minutes)'
             }
         };
-    
+
         // Plot the chart
         Plotly.newPlot('splitTimesChart', traces, layout);
     </script>
-    
 </body>
 
 </html>
