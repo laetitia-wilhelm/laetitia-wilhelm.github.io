@@ -214,8 +214,7 @@ nav img {
 .box {
     padding: 2rem;
     margin: 60px 0 1rem;
-    background-color: var(--blue-shade-3b);
-    border: 2px solid var(--blue-shade-3);
+    background-color: #e6e6e6;
     border-radius: 1rem;
     text-shadow: white 0 0 0.6rem;
 }
@@ -272,6 +271,46 @@ figure embed {
 
 nav + .title-image {
     margin-top: 3.5rem;
+}
+
+.centerX {
+	left: 50%;
+	-webkit-transform: translate3d(-50%, 0, 0);
+	transform: translate3d(-50%, 0, 0);
+}
+
+nav {
+	position: fixed;
+	height: 6vh;
+	width: 100%;
+	z-index: 1000;
+	top: 0;
+	padding-top: 1rem;
+	padding-bottom: 1rem;
+	background-color: var(--white-shade);
+	box-shadow: 0px 2px 4px var(--yellow-shade-4);
+	display: flex;
+	align-items: center; /* Vertically center items */
+	justify-content: center; /* Horizontally center items */
+}
+
+nav ul {
+	margin: 0;
+	padding: 0;
+	list-style-type: none;
+	display: flex;
+	align-items: center; /* Vertically center items */
+	justify-content: center; /* Horizontally center items */
+}
+
+nav li {
+	margin-left: 3rem;
+}
+
+nav a {
+	font-weight: bold;
+	color: var(--blue-shade-2);
+	text-decoration: none;
 }
 
 /* Text on images */
