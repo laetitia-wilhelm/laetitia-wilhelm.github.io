@@ -8,292 +8,286 @@ We use CSS variables to avoid repetition
 https://developer.mozilla.org/en-US/docs/Web/CSS/--*
 */
 :root {
-	--theme-color-light: rgb(0, 200, 80);
-	--theme-color-dark: rgb(0, 122, 50);
- 	--dark-background-color: rgb(50, 50, 50);
-	--blue-shade-1:#00429d;
-	--blue-shade-2: #4574a5;
-	--blue-shade-3:#71a5b1;
-	--blue-shade-3b :#aad6c2;
-	--yellow-shade-4 : #ffffe0;
-	--yellow-shade-5 : #ffd878;
-	--orange-shade-6 : #ffaa3a;
-	--orange-shade-7 : #ff740e;
-	--red-shade-8: #ff0000;
-	--white-shade: rgb(250,250,250);
+    --theme-color-light: rgb(0, 200, 80);
+    --theme-color-dark: rgb(0, 122, 50);
+    --dark-background-color: rgb(50, 50, 50);
+    --blue-shade-1: #00429d;
+    --blue-shade-2: #4574a5;
+    --blue-shade-3: #71a5b1;
+    --blue-shade-3b: #aad6c2;
+    --yellow-shade-4: #ffffe0;
+    --yellow-shade-5: #ffd878;
+    --orange-shade-6: #ffaa3a;
+    --orange-shade-7: #ff740e;
+    --red-shade-8: #ff0000;
+    --white-shade: rgb(250, 250, 250);
+
+    /* New color theme */
+    --primary-color: #00429d; /* Dark Blue */
+    --secondary-color: #71a5b1; /* Light Blue */
+    --accent-color: #ffaa3a; /* Orange */
+    --background-color: #f4f4f9; /* Light Gray */
+    --text-color: #333333; /* Dark Gray */
+    --heading-color: #00429d; /* Dark Blue */
+    --link-color: #1e90ff; /* Dodger Blue */
+    --link-hover-color: #104e8b; /* Deep Sky Blue */
+}
+
+/* Font family variables */
+:root {
+    --primary-font: 'Roboto', sans-serif;
+    --secondary-font: 'Playfair Display', serif;
 }
 
 * {
-	box-sizing: border-box;
+    box-sizing: border-box;
 }
 
-/*
-Make the document fill the whole viewport, this overrides any weird defaults that browsers might have.
-*/
+/* Make the document fill the whole viewport, this overrides any weird defaults that browsers might have. */
 html, body, figure {
-	width: 100%;
-	padding: 0;
-	margin: 0;
-	border: 0;
+    width: 100%;
+    padding: 0;
+    margin: 0;
+    border: 0;
+    background-color: var(--background-color);
 }
 
 /* Default font and size */
 body {
-	font-family: Arial, Helvetica, sans-serif;
-	font-size: 1.1rem;
+    font-family: var(--primary-font);
+    font-size: 1.1rem;
+    color: var(--text-color);
 }
 
-#showcase{
-	margin-top: 3.5rem;
-	background-image: url(images/lightningLarge.jpg);
-	height: 93vh;
-	background-size:cover;
-	background-position:center;
-	height:100vh;
-	display:flex;
-	/* change disposition of the text*/
-	flex-direction:column;
-	justify-content:center;
-	align-items:center;
-	text-align:center;
-	/*avoid text superposition when the screen is small*/
-	padding:0 20px;
+#showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/track.png);
+    height: 100vh;
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Avoid text superposition when the screen is small */
 }
 
-
-#showcase h1{
-	position: absolute;
+#showcase h1 {
+    position: absolute;
     top: calc(22% - 25px); 
     left: 50%;
     transform: translateX(-50%);
-    font-size: 70px;
-	font-style: italic;
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
     line-height: 1.2;
-    color: white;
-    text-shadow: 0 0 0.6rem black; 
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
 }
 
-/*page margin*/
+/* Page margin */
 .width-limited {
-	max-width: 75%;
-
-	/* Center horizontally: */
-	margin-left: auto;
-	margin-right: auto;
+    max-width: 75%;
+    margin-left: auto;
+    margin-right: auto;
 }
 
 /* Links: apply our theme color and remove underline */
 a {
-	color: var(--orange-shade-7);
-	text-decoration: none;
+    color: var(--link-color);
+    text-decoration: none;
+}
+
+a:hover {
+    color: var(--link-hover-color);
 }
 
 /* Justify paragraphs */
 p {
-	text-align: justify;
-	
+    text-align: justify;
 }
 
 /* Titles: set color and sizes */
-h1, h2, h3, h4, h5, h6
-{
-	color: var(--blue-shade-2);
+h1, h2, h3, h4, h5, h6 {
+    color: var(--heading-color);
+    font-family: var(--secondary-font);
+    margin-bottom: 1rem;
 }
-h1 { font-size: 2rem;}
-h2 { font-size: 1.75rem;}
-h3 { font-size: 1.75rem; }
-h4 { font-size: 1.25rem; }
+
+h1 {
+    font-size: 2.5rem;
+    font-weight: 700;
+}
+
+h2 {
+    font-size: 2rem;
+    font-weight: 700;
+}
+
+h3 {
+    font-size: 1.75rem;
+    font-weight: 700;
+}
+
+h4 {
+    font-size: 1.5rem;
+    font-weight: 700;
+}
+
+h5 {
+    font-size: 1.25rem;
+    font-weight: 700;
+}
+
+h6 {
+    font-size: 1rem;
+    font-weight: 700;
+}
 
 /* Top navigation bar */
 nav {
     position: fixed; /* Fix the position of the navigation bar */
-	height: 6vh;
-	width: 100%;
-	z-index: 1000; /* Ensure it appears above other content */
-	top:0; /*ensure it is a the top of the viewport*/
-	padding-top: 1rem;
-	padding-bottom: 1rem;
-
-	background-color: var(--white-shade);
-	box-shadow: 0px 2px 4px var(--yellow-shade-4); /* Add a subtle box shadow */
-
-	background-size:cover;
-	background-position:center;
+    height: 6vh;
+    width: 100%;
+    z-index: 1000; /* Ensure it appears above other content */
+    top: 0; /* Ensure it is at the top of the viewport */
+    padding: 1rem 0;
+    background-color: var(--white-shade);
+    box-shadow: 0px 2px 4px var(--yellow-shade-4); /* Add a subtle box shadow */
 }
 
 /* Make the links in the navbar bold */
 nav a {
-	font-weight: bold;
-	color: var(--blue-shade-2);
+    font-weight: bold;
+    color: var(--link-color);
 }
 
 /* Style of the list of links in the navbar */
 nav ul {
-	/* Clear defaults */
-	margin: 0;
-	padding: 0;
-
-	/*to be aligned on the right with the text*/
-	margin-right: calc((100% - 75%) / 2);
-	/* Remove list bullet points */
-	list-style-type: none;
-
-	display: flex;
-	flex-flow: row wrap;
-	justify-content: flex-end;
+    margin: 0;
+    padding: 0;
+    margin-right: calc((100% - 75%) / 2);
+    list-style-type: none;
+    display: flex;
+    flex-flow: row wrap;
+    justify-content: flex-end;
 }
 
 /* Space between links */
 nav li {
-	margin-left: 3rem;
+    margin-left: 3rem;
 }
-
-nav a:hover {
-	/*add an undeline effect*/
-	/*text-decoration: underline;*/
-	color:#ffaa3a;
-  }
-
 
 /* Style nav image */
 nav img {
-	height: 45px;
-	width: auto;
+    height: 45px;
+    width: auto;
     margin-right: 10px;
-	margin-left: calc(0.6*(100% - 70%) / 2);
+    margin-left: calc(0.6 * (100% - 70%) / 2);
     position: absolute; 
     left: 30px;
-	top:4px;
+    top: 4px;
 }
-
 
 /* The box with a dark background and our site's title */
 .title-row {
-	width: 100%;
-	top: 50px;
-	position: relative;
-
-	/* Space above and below the title */
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-
-	background-color: var(--yellow-shade-4);
-	background: linear-gradient(45deg, var(--blue-shade-2), var(--yellow-shade-4));
-	/* Center the title using flexbox */
-	display: flex;
-	justify-content: center;
-	align-items: center;
+    width: 100%;
+    top: 50px;
+    position: relative;
+    padding: 2rem 0;
+    background: linear-gradient(45deg, var(--blue-shade-2), var(--yellow-shade-4));
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }
 
 /* Style of the title inside the box */
 .title-row h1 {
-	top: 60px;
-	font-size: 2.1rem;
-	color: white;
-	font-variant: small-caps;
-	text-decoration: underline;
-
-	text-shadow: black 0 0 0.6rem;
+    font-size: 2.1rem;
+    color: white;
+    font-variant: small-caps;
+    text-decoration: underline;
+    text-shadow: black 0 0 0.6rem;
 }
 
 .box {
-	padding-left: 2rem;
-	padding-right: 2rem;
-	margin-bottom: 1rem;
-	margin-top: 60px;
-
-	background-color: var(--blue-shade-3b);
-
-	border: 2px solid var(--blue-shade-3);
-	border-radius: 1rem;
-
-	text-shadow: white 0 0 0.6rem;
-
+    padding: 2rem;
+    margin: 60px 0 1rem;
+    background-color: var(--blue-shade-3b);
+    border: 2px solid var(--blue-shade-3);
+    border-radius: 1rem;
+    text-shadow: white 0 0 0.6rem;
 }
 
 .viz-row {
-	width: 100%;
-	/* Center the title using flexbox */
-	display: flex;
-	justify-content: center;
-	align-items: center;
-
-	padding-top: 2rem;
-	padding-bottom: 2rem;
-
-	background-color: var(#85bf8397);
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2rem 0;
+    background-color: var(--blue-shade-2);
 }
 
 figure embed {
-	width: 100%;
+    width: 100%;
 }
 
 #page-container {
-	position: relative;
-	min-height: 20vh;
+    position: relative;
+    min-height: 20vh;
 }
 
 #content-wrap {
-	padding-bottom: 20vh;    /* Footer height */
-	background: var(--blue-shade-2);
-
+    padding-bottom: 20vh; /* Footer height */
+    background: var(--blue-shade-2);
 }
 
 #footer {
-	position: absolute;
-	bottom: 0;
-	width: 100%;
-	/* Footer height */
-	height: 1 rem;          
-	color: white;
-	text-align: center;
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    height: 1rem; /* Footer height */
+    color: white;
+    text-align: center;
 }
 
-.footer-content{
-	display: flex;
-	align-items: center;
-	justify-content: center;
-	flex-direction: column;
-	color: #ffffe0;
+.footer-content {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-direction: column;
+    color: var(--yellow-shade-4);
 }
 
-.footer-content h3{
-	font-size: 1.8rem;
-	font-weight: 400;
-	color: #ffffe0;
+.footer-content h3 {
+    font-size: 1.8rem;
+    font-weight: 400;
 }
 
-
-
-/* Adjust the top margin to position it below the title
-ensure everything is below the title exect title image*/
+/* Adjust the top margin to position it below the title, ensure everything is below the title except title image */
 .title-row + * {
-	    margin-top: 5rem;
+    margin-top: 5rem;
 }
 
 nav + .title-image {
-	margin-top: 3.5rem;
+    margin-top: 3.5rem;
 }
 
-
-
-/* text on images*/
-
-
+/* Text on images */
 .container {
-	font-family: "GFS Neohellenic";
-	font-size: 80px;
-	font-style: italic;
-	position: relative;
-	text-align: left;
-	color: white;
-  }
-
+    font-family: var(--secondary-font);
+    font-size: 80px;
+    font-style: italic;
+    position: relative;
+    text-align: left;
+    color: white;
+}
 
 .top-left {
-	position: absolute;
-	top: 8px;
-	left: 16px;
+    position: absolute;
+    top: 8px;
+    left: 16px;
 }
 
 /* Main styles */
@@ -319,7 +313,9 @@ nav + .title-image {
 .sketch p {
     margin-top: 1rem; /* Add space between image and description */
     font-size: 1rem; /* Adjust font size */
-    color: var(--blue-shade-2); /* Use theme color for text */
+
+
+    color: var(--heading-color); /* Use theme color for text */
 }
 
 /* Adjustments for responsiveness */
@@ -328,9 +324,39 @@ nav + .title-image {
         flex-direction: column; /* Stack images on top of each other */
         align-items: center;
     }
-    
+
     .sketch {
         width: 80%; /* Make images take up more space on smaller screens */
         margin-bottom: 2rem; /* Add space between images */
     }
 }
+
+@keyframes slideDown {
+    0% {
+        transform: translateY(-100%) translateX(-50%);
+        opacity: 0;
+    }
+    100% {
+        transform: translateY(0) translateX(-50%);
+        opacity: 1;
+    }
+}
+
+.animated-title {
+    animation: slideDown 1s ease forwards; /* Adjust duration and easing as needed */
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translateX(-50%); /* Center horizontally */
+    font-size: 70px;
+    font-style: italic;
+    line-height: 1.2;
+    color: white;
+    text-shadow: 0 0 0.6rem black;
+}
+
+
+
+
+
+

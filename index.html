@@ -10,7 +10,10 @@
     <meta name="description" content="Explore race statistics and strategies of Olympic 1500m finalists through data visualization">
     <meta name="author" content="Elisa, Laetitia & Paul">
 
+    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -28,8 +31,7 @@
             </ul>
         </nav>
 
-        <h1>1500m Olympic Finals</h1>
-        
+        <h1 class="animated-title">1500m Olympic Finals</h1>        
     </header>
 
     <main class="width-limited">
@@ -91,6 +93,20 @@
         </div>
         <footer id="footer"></footer>
     </div>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('.box, .sketches', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: null,
+            easing: 'ease-in-out',
+            duration: 1000,
+            reset: true // Reset animations when elements are hidden
+        });
+    </script>
+    
 
 </body>
 
