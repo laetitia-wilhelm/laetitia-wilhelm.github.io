@@ -42,6 +42,10 @@
             <div id="splitTimesChart"></div>
             <h2>Plot Explanation</h2>
             <p>Above we observe the 2020 1500m Olympic final results with the 100m split times measured for all athletes. We notice that Jakob Ingebrigtsen leads from 200m until 400m after which Timothy Cheruiyot overtakes him. Timothy then stays in the lead until 1200m after which Jakob overtakes him once more to win the race with a new olympic record: 3:28.32.</p>
+            <div id="positionsChart"></div>
+            <h2>Plot Explanation</h2>
+            <p>Here we see the athlete rankings per split.</p>
+
         </section>
     </main>
 
@@ -102,8 +106,8 @@
             traces.push(trace);
         }
 
-        // Layout for the chart
-        var layout = {
+        // Layout for the first chart (Mean Speeds for Each 100m Segment)
+        var layout1 = {
             title: 'Athlete Mean Speeds for Each 100m Segment',
             xaxis: {
                 title: 'Distance'
@@ -113,10 +117,60 @@
             }
         };
 
-        // Plot the chart
-        Plotly.newPlot('splitTimesChart', traces, layout);
-    </script>
+        // Plot the first chart (Mean Speeds for Each 100m Segment)
+        Plotly.newPlot('splitTimesChart', traces, layout1);
 
+        // Create traces for positions after each 100m segment
+        var positionsTraces = [];
+        for (var i = 0; i < athleteNames.length; i++) {
+            var positions = [];
+            var ranks = [];
+
+            // Iterate through each split time
+            for (var j = 1; j < splitTimes[i].length; j++) {
+                // Convert split time to seconds
+                var splitTimeInSeconds = timeStringToSeconds(splitTimes[i][j]);
+
+                // Count the number of athletes who passed this split before the current athlete
+                var passedBefore = 0;
+                for (var k = 0; k < splitTimes.length; k++) {
+                    if (k !== i && timeStringToSeconds(splitTimes[k][j]) < splitTimeInSeconds) {
+                        passedBefore++;
+                    }
+                }
+
+                // The rank for this split is the number of athletes who passed before + 1
+                ranks.push(passedBefore + 1);
+
+                // Position after each 100m segment
+                positions.push(j * 100);
+            }
+            var visible = (athleteNames[i] === "ROZMYS Michal" || athleteNames[i] === "HEYWARD Jake" || athleteNames[i] === "GRETHEN Charles") ? 'legendonly' : true;
+            var trace = {
+                x: positions,
+                y: ranks, // Use ranks instead of speeds
+                mode: 'lines+markers',
+                name: athleteNames[i],
+                visible: visible
+            };
+            positionsTraces.push(trace);
+        }
+
+        // Layout for the second chart (Athlete Positions After Each 100m Segment)
+        var layout2 = {
+            title: 'Athlete Positions After Each 100m Segment',
+            xaxis: {
+                title: 'Distance (m)'
+            },
+            yaxis: {
+                title: 'Rank',
+                autorange: 'reversed' // Reverse the y-axis
+            }
+        };
+
+        // Plot the second chart (Athlete Positions After Each 100m Segment)
+        Plotly.newPlot('positionsChart', positionsTraces, layout2);
+    </script>
     <script>
         // Initialize ScrollReveal
         ScrollReveal().reveal('h2, p', {
