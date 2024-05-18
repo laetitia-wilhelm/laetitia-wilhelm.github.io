@@ -11,6 +11,8 @@
     <meta name="author" content="Your Name">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
 <body>
@@ -26,7 +28,7 @@
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
-        
+
         <h1 class="animated-title">Meet the Team</h1>
     </header>
 
@@ -58,6 +60,18 @@
     </main>
 
     <footer></footer>
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('h2, p', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: null,
+            easing: 'ease-in-out',
+            duration: 1000,
+            reset: true // Reset animations when elements are hidden
+        });
+    </script>
 
 </body>
 

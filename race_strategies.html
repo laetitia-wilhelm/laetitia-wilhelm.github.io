@@ -11,6 +11,8 @@
     <meta name="author" content="Your Name">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
 </head>
 
@@ -88,6 +90,19 @@
 
         // Plot the chart
         Plotly.newPlot('splitTimesChart', traces, layout);
+    </script>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('h2, p', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: null,
+            easing: 'ease-in-out',
+            duration: 1000,
+            reset: true // Reset animations when elements are hidden
+        });
     </script>
 </body>
 
