@@ -11,9 +11,11 @@
     <meta name="author" content="Your Name">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="animate.css">
+    <script src="https://unpkg.com/scrollreveal"></script>
 </head>
 
-<body>
+<body class="description-page">
 
     <nav>
         <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img">
@@ -27,12 +29,12 @@
         </ul>
     </nav>
 
-
-    <header class="title-row">
-        <h1> Project Description </h1>
+    <header id="description-showcase">
+        <h1 class="animated-title">Project Description</h1>
     </header>
 
     <main class="width-limited">
+        
         <h2>About the Project</h2>
         <p>
             Our project focuses on visualizing the race strategies of Olympic 1500m finalists. Through data analysis
@@ -53,6 +55,19 @@
             running, and even pace.
         </p>
     </main>
+
+    <script>
+        // Initialize ScrollReveal
+        ScrollReveal().reveal('h2, p', {
+            delay: 300,
+            distance: '50px',
+            origin: 'bottom',
+            opacity: null,
+            easing: 'ease-in-out',
+            duration: 1000,
+            reset: true // Reset animations when elements are hidden
+        });
+    </script>
 
 </body>
 

@@ -59,33 +59,6 @@ body {
     color: var(--text-color);
 }
 
-#showcase {
-    margin-top: 3.5rem;
-    background-image: url(images/track.png);
-    height: 100vh;
-    background-size: cover;
-    background-position: center;
-    display: flex;
-    flex-direction: column;
-    justify-content: center;
-    align-items: center;
-    text-align: center;
-    padding: 0 20px; /* Avoid text superposition when the screen is small */
-}
-
-#showcase h1 {
-    position: absolute;
-    top: calc(22% - 25px); 
-    left: 50%;
-    transform: translateX(-50%);
-    font-family: var(--secondary-font);
-    font-size: 4.375rem; /* 70px */
-    font-style: italic;
-    line-height: 1.2;
-    color: var(--white-shade);
-    text-shadow: 0 0 0.6rem black;
-}
-
 /* Page margin */
 .width-limited {
     max-width: 75%;
@@ -394,8 +367,170 @@ nav a {
     text-shadow: 0 0 0.6rem black;
 }
 
+#home-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/track.png);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: bottom; /* Focus on the bottom part of the image */
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px; /* Avoid text superposition when the screen is small */
+    overflow: hidden; /* Crop image */
+}
 
+#home-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px); 
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
 
+#description-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/project.jpg);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: bottom;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Crop image */
+}
 
+#description-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
 
+#time-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/times.jpg);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Crop image */
+}
 
+#time-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
+
+#medal-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/map.jpg);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Crop image */
+}
+
+#medal-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
+
+#strat-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/strategy.jpg);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Crop image */
+}
+
+#strat-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
+
+#team-showcase {
+    margin-top: 3.5rem;
+    background-image: url(images/team.jpeg);
+    height: 40vh; /* Reduce height to crop vertically */
+    background-size: cover;
+    background-position: center;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+    padding: 0 20px;
+    overflow: hidden; /* Crop image */
+}
+
+#team-showcase h1 {
+    position: absolute;
+    top: calc(22% - 25px);
+    left: 50%;
+    transform: translateX(-50%);
+    font-family: var(--secondary-font);
+    font-size: 4.375rem; /* 70px */
+    font-style: italic;
+    line-height: 1.2;
+    color: var(--white-shade);
+    text-shadow: 0 0 0.6rem black;
+}
