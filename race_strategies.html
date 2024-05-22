@@ -36,22 +36,70 @@
     <main class="width-limited">
         <section class="strategy-section">
             <h2>Analyzing Race Strategies via Split Times</h2>
-            <p>Through interactive visualizations, we want to understand and categorize race strategies and tactics by analyzing split times. This will offer viewers a granular understanding of athletes' performance throughout a race, allowing for deeper insights into their strategic approaches. We will go through the strengths and weaknesses of each strategy and the context in which they succeed or fail.</p>            
+            <p>Through interactive visualizations, we want to:
+                <ul>
+                    <li>Understand and categorize race strategies and tactics by analyzing split times.</li>
+                    <li>Offer viewers a granular understanding of athletes' performance throughout a race, allowing for deeper insights into their strategic approaches.</li>
+                    <li>Go through the strengths and weaknesses of each strategy and the context in which they succeed or fail.</li>
+                    <li>Generalize racing strategies into several categories that we will now define:</li>
+                    <ul>
+                        <li>The <strong>front-running strategy</strong> typically involves a fast start to gap others to stop them from drafting the leader, then an even pace. This tactic is mostly used by more aerobic athletes to avoid being outsprinted.</li>
+                        <li>The <strong>sit and kick strategy</strong> has a slow start into an even pace then a strong finish.</li>
+                        <li>The <strong>negative split strategy</strong> has a slow start into a gradual speed increase until the end.</li>
+                        <li>The <strong>even pace strategy</strong> has no significant speed variations; an even pace is kept for the entire race.</li>
+                    </ul>
+                </ul>
+            </p>
         </section>
         <section class="explanations-section">
+            <button id="toggleButton" onclick="toggleData()">Displayed Year: 2020</button>
             <div id="splitTimesChart"></div>
+            <div id="splitTimesChart2" style="display: none;"></div>
             <h2>Plot Explanation</h2>
-            <p>Above we observe the 2020 1500m Olympic final results with the 100m split times measured for all athletes. We notice that Jakob Ingebrigtsen leads from 200m until 400m after which Timothy Cheruiyot overtakes him. Timothy then stays in the lead until 1200m after which Jakob overtakes him once more to win the race with a new olympic record: 3:28.32.</p>
+            <p id="splitTimesExplanation">Above we observe how Jakob Ingebrigtsen outkicks his rival Timothy Cheruiyot over the last 400m to win the 2020 1500m Olympic finals.</p>
             <div id="positionsChart"></div>
+            <div id="positionsChart2" style="display: none;"></div>
             <h2>Plot Explanation</h2>
-            <p>Here we see the athlete rankings per split.</p>
-
+            <p id="positionsExplanation">Here we notice that Jakob Ingebrigtsen leads from 200m until 400m after which Timothy Cheruiyot overtakes him. Timothy then stays in the lead until 1300m after which Jakob overtakes him once more to win the race with a new Olympic record: 3:28.32. Cheruiyot's strategy would be considered front running, Ingebrigtsen's strategy corresponds to the sit and kick strategy, and Josh Kerr's strategy is a negative split strategy given his progressively faster pace.</p>
         </section>
+        
+        
     </main>
 
     <footer></footer>
 
     <script>
+        function toggleData() {
+            var button = document.getElementById('toggleButton');
+            var splitTimesChart = document.getElementById('splitTimesChart');
+            var splitTimesChart2 = document.getElementById('splitTimesChart2');
+            var positionsChart = document.getElementById('positionsChart');
+            var positionsChart2 = document.getElementById('positionsChart2');
+            var splitTimesExplanation = document.getElementById('splitTimesExplanation');
+            var splitTimesExplanation2 = document.getElementById('splitTimesExplanation2');
+            var positionsExplanation = document.getElementById('positionsExplanation');
+            var positionsExplanation2 = document.getElementById('positionsExplanation2');
+
+            if (splitTimesChart.style.display === 'none') {
+                splitTimesChart.style.display = 'block';
+                splitTimesChart2.style.display = 'none';
+                positionsChart.style.display = 'block';
+                positionsChart2.style.display = 'none';
+                splitTimesExplanation.textContent = 'Above we observe how Jakob Ingebrigtsen outkicks his rival Timothy Cheruiyot over the last 400m to win the 2020 1500m Olympic finals.'; // Show the 2020 paragraph
+                positionsExplanation.textContent = "Here we notice that Jakob Ingebrigtsen leads from 200m until 400m after which Timothy Cheruiyot overtakes him. Timothy then stays in the lead until 1300m after which Jakob overtakes him once more to win the race with a new Olympic record: 3:28.32. Cheruiyot's strategy would be considered front running, Ingebrigtsen's strategy corresponds to the sit and kick strategy, and Josh Kerr's strategy is a negative split strategy given his progressively faster pace.";
+                button.textContent = 'Displayed Year: 2020';
+            } else {
+                splitTimesChart.style.display = 'none';
+                splitTimesChart2.style.display = 'block';
+                positionsChart.style.display = 'none';
+                positionsChart2.style.display = 'block';
+                splitTimesExplanation.textContent = 'In 2016, the Olympic 1500m Finals were far more tactical with slower overall finishing times. We see a split from 1300m to 1400m showing how the top 3 athletes can maintain their high speed for longer than the last 2 in the final 500m.';
+                positionsExplanation.textContent = 'Matthew Centrowitz led this race practically the entire way, but the pace was one of the slowest in history so drafting is a negligible issue here. This is a strange combination of front-running and sit and kick that ended up working for Centrowitz thanks to his remarkable power and speed. As seen in the graph, Makhloufi, Willis and Souleiman all need to overtake the other athletes expending more energy than Centrowitz when he starts his final kick.';
+                button.textContent = 'Displayed Year: 2016';
+            }
+        }
+
+
         // Function to convert time string to seconds
         function timeStringToSeconds(timeString) {
             let parts = timeString.split(':');
@@ -62,22 +110,12 @@
             return parseFloat(timeString);
         }
 
-        var athleteNames = ["INGEBRIGTSEN Jakob", "CHERUIYOT Timothy", "KERR Josh", "KIPSANG Abel", "MECHAAL Adel", "HOCKER Cole", "McSWEYN Stewart", "ROZMYS Michal", "HEYWARD Jake", "WIGHTMAN Jake", "HOARE Oliver", "GRETHEN Charles", "FONTES Ignacio"];
-        var splitTimes = [
-            ['0', '14.1', '27.8', '42.0', '56.2', '1:10.5', '1:24.3', '1:38.2', '1:52.0', '2:06.1', '2:20.0', '2:33.9', '2:47.5', '3:01.2', '3:14.7', '3:28.32'],
-            ['0', '14.2', '28.3', '42.2', '56.4', '1:10.3', '1:24.0', '1:37.9', '1:51.8', '2:05.8', '2:19.7', '2:33.6', '2:47.3', '3:01.0', '3:14.9', '3:29.01'],
-            ['0', '13.8', '28.7', '42.9', '57.3', '1:11.3', '1:25.3', '1:39.2', '1:53.2', '2:07.2', '2:21.3', '2:34.9', '2:48.4', '3:01.9', '3:15.4', '3:29.05'],
-            ['0', '13.8', '28.7', '43.2', '57.1', '1:11.0', '1:24.7', '1:38.6', '1:52.7', '2:06.8', '2:20.9', '2:34.8', '2:48.2', '3:01.7', '3:15.3', '3:29.56'],
-            ['0', '14.4', '28.7', '43.0', '57.4', '1:11.6', '1:25.6', '1:39.4', '1:53.4', '2:07.5', '2:21.5', '2:35.2', '2:48.7', '3:02.5', '3:16.4', '3:30.77'],
-            ['0', '14.0', '28.8', '43.0', '57.4', '1:11.8', '1:25.8', '1:39.6', '1:53.8', '2:08.0', '2:22.5', '2:36.6', '2:50.3', '3:04.0', '3:17.5', '3:31.40'],
-            ['0', '14.2', '28.3', '42.4', '56.6', '1:10.7', '1:24.5', '1:38.4', '1:52.3', '2:06.3', '2:20.2', '2:34.3', '2:48.4', '3:02.8', '3:17.2', '3:31.91'],
-            ['0', '13.8', '28.2', '42.3', '56.5', '1:10.9', '1:25.2', '1:39.1', '1:53.2', '2:07.8', '2:22.3', '2:36.4', '2:50.0', '3:04.0', '3:18.1', '3:32.67'],
-            ['0', '13.7', '28.3', '42.8', '57.1', '1:11.2', '1:25.5', '1:39.5', '1:53.7', '2:08.1', '2:22.7', '2:36.9', '2:51.3', '3:05.7', '3:20.1', '3:34.43'],
-            ['0', '13.8', '28.5', '42.5', '56.9', '1:10.9', '1:24.9', '1:39.0', '1:52.5', '2:06.9', '2:21.2', '2:35.5', '2:49.7', '3:04.5', '3:19.9', '3:35.09'],
-            ['0', '13.6', '28.0', '42.2', '56.4', '1:10.7', '1:24.7', '1:38.8', '1:53.0', '2:07.6', '2:22.0', '2:36.8', '2:51.1', '3:06.2', '3:21.3', '3:35.79'],
-            ['0', '14.0', '29.0', '43.2', '57.5', '1:11.9', '1:26.0', '1:39.8', '1:54.0', '2:08.3', '2:22.9', '2:37.3', '2:51.6', '3:06.3', '3:21.1', '3:36.80'],
-            ['0', '13.6', '28.2', '42.6', '57.1', '1:11.6', '1:25.9', '1:40.1', '1:54.4', '2:08.9', '2:23.6', '2:38.5', '2:53.0', '3:08.0', '3:23.3', '3:38.56']
-        ];
+        var athleteNames2016 = ['CENTROWITZ Matthew', 'MAKHLOUFI Taoufik', 'WILLIS Nicholas', 'SOULEIMAN Ayanleh', 'IGUIDER Abdalaati', 'KIPROP Asbel', 'BUSTOS David', 'BLANKENSHIP Ben', 'GREGSON Ryan', 'BRANNEN Nathan', 'MUSAGALA Ronald', 'GRICE Charlie']
+        var splitTimes2016 = [['14.3', '31.3', '49.1', '1:06.9', '1:25.0', '1:43.6', '2:00.2', '2:16.7', '2:32.1', '2:46.3', '2:59.5', '3:12.0', '3:24.6', '3:37.3', '3:50.00'], ['14.7', '31.8', '49.6', '1:07.4', '1:25.4', '1:44.3', '2:00.7', '2:17.5', '2:32.9', '2:47.0', '2:59.6', '3:12.3', '3:24.8', '3:37.5', '3:50.11'], ['14.6', '31.8', '49.2', '1:07.1', '1:25.0', '1:43.8', '2:00.4', '2:16.8', '2:32.3', '2:46.5', '2:59.7', '3:12.5', '3:25.0', '3:37.8', '3:50.24'], ['15.2', '32.2', '50.0', '1:07.8', '1:25.7', '1:44.4', '2:00.3', '2:16.8', '2:32.1', '2:46.2', '2:59.6', '3:12.3', '3:24.9', '3:37.7', '3:50.29'], ['15.1', '32.4', '50.0', '1:07.8', '1:25.7', '1:44.6', '2:00.6', '2:17.3', '2:32.7', '2:47.2', '2:59.5', '3:12.1', '3:24.8', '3:37.6', '3:50.58'], ['15.3', '32.5', '50.2', '1:08.0', '1:25.9', '1:44.7', '2:00.3', '2:16.9', '2:32.8', '2:47.0', '2:59.6', '3:12.5', '3:24.6', '3:37.5', '3:50.87'], ['14.3', '31.4', '49.1', '1:07.0', '1:25.0', '1:43.8', '2:00.5', '2:17.0', '2:32.6', '2:46.8', '3:00.0', '3:12.9', '3:25.3', '3:38.1', '3:51.06'], ['14.4', '31.6', '49.4', '1:07.2', '1:25.2', '1:44.0', '2:00.2', '2:16.6', '2:32.3', '2:46.4', '2:59.8', '3:12.7', '3:25.2', '3:38.3', '3:51.09'], ['14.5', '31.6', '49.3', '1:07.1', '1:25.2', '1:43.9', '2:00.7', '2:17.3', '2:32.9', '2:47.1', '3:00.2', '3:13.1', '3:25.6', '3:38.7', '3:51.39'], ['14.7', '32.0', '49.7', '1:07.6', '1:25.5', '1:44.1', '2:00.6', '2:17.1', '2:32.5', '2:46.8', '3:00.0', '3:12.9', '3:25.4', '3:38.5', '3:51.45'], ['14.5', '31.8', '49.6', '1:07.4', '1:25.4', '1:44.1', '2:00.6', '2:17.1', '2:32.6', '2:47.2', '3:00.0', '3:12.7', '3:25.1', '3:38.0', '3:51.68'], ['14.5', '31.9', '49.7', '1:07.5', '1:25.5', '1:44.0', '2:00.4', '2:17.0', '2:32.4', '2:46.6', '2:59.7', '3:12.4', '3:25.2', '3:37.9', '3:51.73']]
+        var splitRanks2016 = [[1, 1, 1, 1, 1, 1, 1, 2, 1, 2, 2, 1, 1, 1, 1], [8, 6, 6, 6, 6, 9, 12, 12, 11, 9, 5, 3, 3, 3, 2], [7, 7, 3, 3, 3, 3, 5, 4, 4, 4, 7, 6, 6, 6, 3], [12, 10, 11, 11, 11, 10, 3, 3, 2, 1, 4, 4, 5, 5, 4], [11, 12, 12, 12, 12, 12, 9, 10, 9, 12, 1, 2, 4, 4, 5], [13, 13, 13, 13, 13, 13, 4, 5, 10, 8, 3, 7, 2, 2, 6], [2, 2, 2, 2, 2, 2, 7, 7, 7, 7, 10, 11, 11, 9, 7], [3, 4, 5, 5, 4, 6, 2, 1, 3, 3, 8, 8, 10, 10, 8], [4, 3, 4, 4, 5, 4, 11, 11, 12, 10, 13, 13, 13, 12, 9], [9, 9, 9, 9, 8, 7, 10, 8, 6, 6, 11, 12, 12, 11, 10], [5, 5, 7, 7, 7, 8, 8, 9, 8, 11, 9, 9, 7, 8, 11], [6, 8, 8, 8, 9, 5, 6, 6, 5, 5, 6, 5, 8, 7, 12]]
+        var athleteNames2020 = ["INGEBRIGTSEN Jakob", "CHERUIYOT Timothy", "KERR Josh", "KIPSANG Abel", "MECHAAL Adel", "HOCKER Cole", "McSWEYN Stewart", "ROZMYS Michal", "HEYWARD Jake", "WIGHTMAN Jake", "HOARE Oliver", "GRETHEN Charles", "FONTES Ignacio"];
+        var splitTimes2020 = [['0', '14.1', '27.8', '42.0', '56.2', '1:10.5', '1:24.3', '1:38.2', '1:52.0', '2:06.1', '2:20.0', '2:33.9', '2:47.5', '3:01.2', '3:14.7', '3:28.32'],['0', '14.2', '28.3', '42.2', '56.4', '1:10.3', '1:24.0', '1:37.9', '1:51.8', '2:05.8', '2:19.7', '2:33.6', '2:47.3', '3:01.0', '3:14.9', '3:29.01'],['0', '13.8', '28.7', '42.9', '57.3', '1:11.3', '1:25.3', '1:39.2', '1:53.2', '2:07.2', '2:21.3', '2:34.9', '2:48.4', '3:01.9', '3:15.4', '3:29.05'],['0', '13.8', '28.7', '43.2', '57.1', '1:11.0', '1:24.7', '1:38.6', '1:52.7', '2:06.8', '2:20.9', '2:34.8', '2:48.2', '3:01.7', '3:15.3', '3:29.56'],['0', '14.4', '28.7', '43.0', '57.4', '1:11.6', '1:25.6', '1:39.4', '1:53.4', '2:07.5', '2:21.5', '2:35.2', '2:48.7', '3:02.5', '3:16.4', '3:30.77'],['0', '14.0', '28.8', '43.0', '57.4', '1:11.8', '1:25.8', '1:39.6', '1:53.8', '2:08.0', '2:22.5', '2:36.6', '2:50.3', '3:04.0', '3:17.5', '3:31.40'],['0', '14.2', '28.3', '42.4', '56.6', '1:10.7', '1:24.5', '1:38.4', '1:52.3', '2:06.3', '2:20.2', '2:34.3', '2:48.4', '3:02.8', '3:17.2', '3:31.91'],['0', '13.8', '28.2', '42.3', '56.5', '1:10.9', '1:25.2', '1:39.1', '1:53.2', '2:07.8', '2:22.3', '2:36.4', '2:50.0', '3:04.0', '3:18.1', '3:32.67'],['0', '13.7', '28.3', '42.8', '57.1', '1:11.2', '1:25.5', '1:39.5', '1:53.7', '2:08.1', '2:22.7', '2:36.9', '2:51.3', '3:05.7', '3:20.1', '3:34.43'],['0', '13.8', '28.5', '42.5', '56.9', '1:10.9', '1:24.9', '1:39.0', '1:52.5', '2:06.9', '2:21.2', '2:35.5', '2:49.7', '3:04.5', '3:19.9', '3:35.09'],['0', '13.6', '28.0', '42.2', '56.4', '1:10.7', '1:24.7', '1:38.8', '1:53.0', '2:07.6', '2:22.0', '2:36.8', '2:51.1', '3:06.2', '3:21.3', '3:35.79'],['0', '14.0', '29.0', '43.2', '57.5', '1:11.9', '1:26.0', '1:39.8', '1:54.0', '2:08.3', '2:22.9', '2:37.3', '2:51.6', '3:06.3', '3:21.1', '3:36.80'],['0', '13.6', '28.2', '42.6', '57.1', '1:11.6', '1:25.9', '1:40.1', '1:54.4', '2:08.9', '2:23.6', '2:38.5', '2:53.0', '3:08.0', '3:23.3', '3:38.56']];
+        var splitRanks2020 = [[10, 1, 1, 1, 2, 2, 2, 2, 2, 2, 2, 2, 2, 1, 1],[11, 6, 3, 3, 1, 1, 1, 1, 1, 1, 1, 1, 1, 2, 2],[7, 10, 9, 10, 9, 8, 8, 7, 6, 6, 5, 4, 4, 4, 3],[6, 9, 13, 8, 7, 4, 4, 5, 4, 4, 4, 3, 3, 3, 4],[13, 11, 10, 11, 10, 10, 9, 9, 7, 7, 6, 6, 5, 5, 5],[9, 12, 11, 12, 12, 11, 11, 11, 10, 10, 9, 9, 7, 7, 6],[12, 5, 5, 5, 3, 3, 3, 3, 3, 3, 3, 5, 6, 6, 7],[5, 3, 4, 4, 5, 7, 7, 8, 9, 9, 8, 8, 8, 8, 8],[3, 7, 8, 7, 8, 9, 10, 10, 11, 11, 11, 11, 10, 10, 9],[4, 8, 6, 6, 6, 6, 6, 4, 5, 5, 7, 7, 9, 9, 10],[2, 2, 2, 2, 4, 5, 5, 6, 8, 8, 10, 10, 11, 12, 11],[8, 13, 12, 13, 13, 13, 12, 12, 12, 12, 12, 12, 12, 11, 12],[1, 4, 7, 9, 11, 12, 13, 13, 13, 13, 13, 13, 13, 13, 13]]
 
         // Function to calculate speeds in m/s for each segment
         function calculateSpeeds(times) {
@@ -91,24 +129,25 @@
         }
 
         // Calculate speeds for all athletes
-        var speeds = splitTimes.map(calculateSpeeds);
+        var speeds2016 = splitTimes2016.map(calculateSpeeds);
+        var speeds2020 = splitTimes2020.map(calculateSpeeds);
 
         // Create traces for each athlete
         var traces = [];
-        for (var i = 0; i < athleteNames.length; i++) {
+        for (var i = 0; i < athleteNames2020.length; i++) {
             var trace = {
                 x: ['100m', '200m', '300m', '400m', '500m', '600m', '700m', '800m', '900m', '1000m', '1100m', '1200m', '1300m', '1400m', '1500m'],
-                y: speeds[i],
+                y: speeds2020[i],
                 mode: 'lines+markers',
-                name: athleteNames[i],
-                visible: (athleteNames[i] === "INGEBRIGTSEN Jakob" || athleteNames[i] === "CHERUIYOT Timothy") ? true : 'legendonly'
+                name: athleteNames2020[i],
+                visible: (i < 2) ? true : 'legendonly'
             };
             traces.push(trace);
         }
 
         // Layout for the first chart (Mean Speeds for Each 100m Segment)
         var layout1 = {
-            title: 'Athlete Mean Speeds for Each 100m Segment',
+            title: '2020 Athlete Mean Speeds for Each 100m Segment',
             xaxis: {
                 title: 'Distance'
             },
@@ -122,19 +161,19 @@
 
         // Create traces for positions after each 100m segment
         var positionsTraces = [];
-        for (var i = 0; i < athleteNames.length; i++) {
+        for (var i = 0; i < athleteNames2020.length; i++) {
             var positions = [];
             var ranks = [];
 
             // Iterate through each split time
-            for (var j = 1; j < splitTimes[i].length; j++) {
+            for (var j = 1; j < splitTimes2020[i].length; j++) {
                 // Convert split time to seconds
-                var splitTimeInSeconds = timeStringToSeconds(splitTimes[i][j]);
+                var splitTimeInSeconds = timeStringToSeconds(splitTimes2020[i][j]);
 
                 // Count the number of athletes who passed this split before the current athlete
                 var passedBefore = 0;
-                for (var k = 0; k < splitTimes.length; k++) {
-                    if (k !== i && timeStringToSeconds(splitTimes[k][j]) < splitTimeInSeconds) {
+                for (var k = 0; k < splitTimes2020.length; k++) {
+                    if (k !== i && timeStringToSeconds(splitTimes2020[k][j]) < splitTimeInSeconds) {
                         passedBefore++;
                     }
                 }
@@ -145,20 +184,20 @@
                 // Position after each 100m segment
                 positions.push(j * 100);
             }
-            var visible = (athleteNames[i] === "ROZMYS Michal" || athleteNames[i] === "HEYWARD Jake" || athleteNames[i] === "GRETHEN Charles") ? 'legendonly' : true;
+            var visible = (athleteNames2020[i] === "ROZMYS Michal" || athleteNames2020[i] === "HEYWARD Jake" || athleteNames2020[i] === "GRETHEN Charles"|| athleteNames2020[i] === "HOCKER Cole"|| athleteNames2020[i] === "McSWEYN Stewart") ? 'legendonly' : true;
             var trace = {
                 x: positions,
                 y: ranks, // Use ranks instead of speeds
                 mode: 'lines+markers',
-                name: athleteNames[i],
-                visible: visible
+                name: athleteNames2020[i],
+                visible: (i < 5 || i >= athleteNames2020.length - 4) ? true : 'legendonly'
             };
             positionsTraces.push(trace);
         }
 
         // Layout for the second chart (Athlete Positions After Each 100m Segment)
         var layout2 = {
-            title: 'Athlete Positions After Each 100m Segment',
+            title: '2020 Athlete Positions After Each 100m Segment',
             xaxis: {
                 title: 'Distance (m)'
             },
@@ -170,6 +209,72 @@
 
         // Plot the second chart (Athlete Positions After Each 100m Segment)
         Plotly.newPlot('positionsChart', positionsTraces, layout2);
+
+        //2016
+        // Create traces for each athlete
+        var traces2 = [];
+        for (var i = 0; i < athleteNames2016.length; i++) {
+            var trace = {
+                x: ['100m', '200m', '300m', '400m', '500m', '600m', '700m', '800m', '900m', '1000m', '1100m', '1200m', '1300m', '1400m', '1500m'],
+                y: speeds2016[i],
+                mode: 'lines+markers',
+                name: athleteNames2016[i],
+                visible: (i < 3 || i >= athleteNames2016.length - 2) ? true : 'legendonly' // Show the first 5 athletes, hide others by default
+            };
+            traces2.push(trace);
+        }
+
+        // Layout for the first chart (Mean Speeds for Each 100m Segment)
+        var layout3 = {
+            title: '2016 Athlete Mean Speeds for Each 100m Segment',
+            xaxis: {
+                title: 'Distance'
+            },
+            yaxis: {
+                title: 'Speed (m/s)'
+            }
+        };
+
+        // Plot the first chart (Mean Speeds for Each 100m Segment)
+        Plotly.newPlot('splitTimesChart2', traces2, layout3);
+
+
+        // Create traces for positions after each 100m segment
+        var positionsTraces2 = [];
+        for (var i = 0; i < splitRanks2016.length; i++) {
+            var positions = [];
+            var ranks = splitRanks2016[i]; // Use splitRanks2020 instead of splitTimes2016
+
+            // Position after each 100m segment
+            for (var j = 0; j < ranks.length; j++) {
+                positions.push((j + 1) * 100);
+            }
+
+            var trace = {
+                x: positions,
+                y: ranks, // Use ranks instead of speeds
+                mode: 'lines+markers',
+                name: athleteNames2016[i], // You might want to customize the names
+                // You can adjust visibility according to your preference
+                visible: (i < 4) ? true : 'legendonly' // Show the first 4 athletes, hide others by default
+            };
+            positionsTraces2.push(trace);
+        }
+
+        // Layout for the second chart (Athlete Positions After Each 100m Segment)
+        var layout4 = {
+            title: '2016 Athlete Positions After Each 100m Segment',
+            xaxis: {
+                title: 'Distance (m)'
+            },
+            yaxis: {
+                title: 'Rank',
+                autorange: 'reversed' // Reverse the y-axis
+            }
+        };
+
+        // Plot the second chart (Athlete Positions After Each 100m Segment)
+        Plotly.newPlot('positionsChart2', positionsTraces2, layout4);
     </script>
     <script>
         // Initialize ScrollReveal
