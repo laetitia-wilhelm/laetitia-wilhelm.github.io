@@ -59,11 +59,18 @@ document.addEventListener('DOMContentLoaded', function () {
                 enabled: false
             },
             title: {
-                text: `Medals won by ${selectedCountry}`
+                text: `Medals & Winner of ${selectedCountry}`,
+                style : {
+                    color: '#00429d', //shade number 3
+                },
             },
+
             xAxis: {
                 categories: years,
-                crosshair: true
+                crosshair: true,
+                labels: {
+                rotation : -45,
+                }
             },
             yAxis: {
                 min: 0,
@@ -74,7 +81,7 @@ document.addEventListener('DOMContentLoaded', function () {
             },
             tooltip: {
                 formatter: function () {
-                    let tooltip = `<b>${this.x} </b><br/>`; // Year
+                    let tooltip = `<b>${this.x} Winner </b><br/>`; // Year
 
                     // Create an object to store winners for each medal type
                     const winnersObj = {
@@ -96,13 +103,13 @@ document.addEventListener('DOMContentLoaded', function () {
                     ['gold', 'silver', 'bronze'].forEach(medalType => {
                         if (winnersObj[medalType].length > 0) {
                             tooltip += `${medalType.charAt(0).toUpperCase() + medalType.slice(1)} `;
-                            tooltip += `Winner : ${winnersObj[medalType].join(', ')}<br/>`;
+                            tooltip += `: ${winnersObj[medalType].join(', ')}<br/>`;
                         }
                     });
 
                     // Calculate total medals
                     const totalMedals = this.points.reduce((total, point) => total + point.y, 0);
-                    tooltip += `Total: ${totalMedals}`;
+                    /*tooltip += `Total: ${totalMedals}`;*/
 
                     return tooltip;
                 },

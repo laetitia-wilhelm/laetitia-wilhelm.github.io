@@ -36,6 +36,9 @@
             title: {
                 text: null
             },
+            credits: {
+                enabled: false
+            },
 
             mapView: {
                 zoom: 2
@@ -146,19 +149,26 @@
                         type: 'column',
                         backgroundColor: null
                     },
+                    credits: {
+                        enabled: false
+                    },
                     title: {
                         text: `Medals won by ${selectedPoint.Nation}`
                     },
                     xAxis: {
                         categories: disciplines,
-                        title: {
-                            text: 'Discipline [m]'
+
+                        labels: {
+                            rotation: -45,
+                            formatter: function () {
+                                return this.value + ' m'; // Append 'm' to the category value
+                            }
                         }
                     },
                     yAxis: {
                         min: 0,
                         title: {
-                            text: 'Number of Medals'
+                            text: null,
                         },
                         allowDecimals: false,
                         stackLabels: {
@@ -169,6 +179,7 @@
                             }
                         }
                     },
+                    
                     legend: {
                         align: 'right',
                         x: -30,
@@ -201,7 +212,10 @@
             } else {
                 window.histogramChart.update({
                     title: {
-                        text: `Medals won by ${selectedPoint.Nation}`
+                        text: `Medals won by ${selectedPoint.Nation}`,
+                        style : {
+                            color: '#00429d', //shade number 3
+                        },
                     },
                     xAxis: {
                         categories: disciplines
