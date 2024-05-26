@@ -1,0 +1,47 @@
+[
+  {
+    "country": "KEN",
+    "best_time": 212.07,
+    "medal_count": 7
+  },
+  {
+    "country": "MAR",
+    "best_time": 212.32,
+    "medal_count": 4
+  },
+  {
+    "country": "GBR",
+    "best_time": 212.53,
+    "medal_count": 12
+  },
+  {
+    "country": "NZL",
+    "best_time": 214.16,
+    "medal_count": 7
+  },
+  {
+    "country": "FRA",
+    "best_time": 214.21,
+    "medal_count": 5
+  },
+  {
+    "country": "USA",
+    "best_time": 214.79,
+    "medal_count": 13
+  },
+  {
+    "country": "AUS",
+    "best_time": 215.6,
+    "medal_count": 3
+  },
+  {
+    "country": "GER",
+    "best_time": 225.4,
+    "medal_count": 1
+  },
+  {
+    "country": "ITA",
+    "best_time": 229.2,
+    "medal_count": 2
+  }
+]

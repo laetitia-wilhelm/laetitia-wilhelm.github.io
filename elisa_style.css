@@ -1,0 +1,51 @@
+.controls {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    margin: 10px;
+    width: 1000px;
+}
+.slider {
+    width: 100%;
+    margin: 0 2px;
+}
+button {
+    background-color: #007bff;
+    border: none;
+    color: white;
+    padding: 10px 20px;
+    text-align: center;
+    text-decoration: none;
+    display: inline-block;
+    font-size: 16px;
+    margin: 4px 2px;
+    cursor: pointer;
+    border-radius: 4px;
+}
+
+.axis-label {
+    font-size: 14px;
+}
+.title {
+    font-size: 24px;
+    text-anchor: middle;
+    fill: #333;
+}
+.x.axis path,
+.x.axis line,
+.y.axis path,
+.y.axis line {
+    stroke: #ddd;
+}
+.y.axis text {
+    font-size: 12px;
+    fill: #333;
+}
+.year-label {
+    font-size: 24px;
+    fill: #333;
+    text-anchor: middle;
+    width: 100%;
+    margin: 20px 0;
+}
+
