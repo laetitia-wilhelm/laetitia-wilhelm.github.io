@@ -11,8 +11,34 @@
     <meta name="author" content="Your Name">
 
     <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="elisa_style.css">
     <link rel="stylesheet" href="animate.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <!-- <style>
+        .bar {
+            fill: steelblue;
+        }
+        .bar:hover {
+            fill: orange;
+        }
+        .axis-label {
+            font-size: 12px;
+        }
+        .tooltip {
+            position: absolute;
+            text-align: center;
+            width: 60px;
+            height: 28px;
+            padding: 2px;
+            font: 12px sans-serif;
+            background: lightsteelblue;
+            border: 0px;
+            border-radius: 8px;
+            pointer-events: none;
+        }
+    </style> -->
 </head>
 
 <body>
@@ -35,11 +61,28 @@
 
     <main class="width-limited">
         <section class="times-section">
-            <h2>Top-k Countries Race Times as a Time-Series Bar Chart</h2>
+            <h2>Top-14 Countries Race Times as a Time-Series Bar Chart</h2>
             <p>Through a time-series bar chart, we want to illustrate the chronometric performance trends of the top-k countries across various sporting events. This visualization will offer a chronological perspective, allowing users to discern patterns and fluctuations in athletic performance over time. This can also be applied per gender.</p>
         </section>
-    </main>
+        <div class="controls">
+            <button id="play-pause">Play</button>
+            <input type="range" id="slider" class="slider" min="0" max="0" step="1" value="0">
+        </div>
     
+        <div>
+            <label for="gender-toggle">Men</label>
+            <input type="checkbox" id="gender-toggle">
+            <label for="gender-toggle">Women</label>
+        </div>
+        
+        <svg width="1250" height="700"></svg>
+        <div id="year-label"></div>
+        <script src="elisa_script.js"></script>
+    </main>
+  
+
+
+      
     <script>
         // Initialize ScrollReveal
         ScrollReveal().reveal('h2, p', {
@@ -52,7 +95,7 @@
             reset: true // Reset animations when elements are hidden
         });
     </script>
-
+    
     <footer></footer>
 
 </body>

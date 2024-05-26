@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Bar Chart Race</title>
+    <script src="https://d3js.org/d3.v6.min.js"></script>
+    <link rel="stylesheet" href="elisa_graph/style.css">
+</head>
+<body>
+    <div class="controls">
+        <button id="play-pause">Play</button>
+        <input type="range" id="slider" class="slider" min="0" max="0" step="1" value="0">
+    </div>
+    <div>
+        <label for="gender-toggle">Men</label>
+        <input type="checkbox" id="gender-toggle">
+        <label for="gender-toggle">Women</label>
+    </div>
+    <svg width="960" height="600"></svg>
+    <div id="year-label"></div>
+    <script src="script.js"></script>
+</body>
+</html>
+
+
