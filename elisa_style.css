@@ -3,24 +3,65 @@
     justify-content: center;
     align-items: center;
     margin: 10px;
-    width: 1000px;
-}
-.slider {
     width: 100%;
-    margin: 0 2px;
 }
+
+.slider {
+    -webkit-appearance: none;
+    width: 60%;
+    height: 3px;
+    border-radius: 5px;  
+    background: #b1b1b1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+}
+
+.slider:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+
+.slider::-webkit-slider-thumb {
+    -webkit-appearance: none;
+    appearance: none;
+    width: 10px;
+    height: 20px;
+    border-radius: 15%; 
+    background: #00429d;
+    cursor: pointer;
+}
+
+.slider::-moz-range-thumb {
+    width: 10px;
+    height: 20px;
+    border-radius: 15%;
+    background: #00429d;
+    cursor: pointer;
+}
+
 button {
-    background-color: #007bff;
-    border: none;
-    color: white;
-    padding: 10px 20px;
+    background-color: #007bff00;
+    border: 2px solid #00429d;
+    color: #00429d;
+    padding: 5px 10px;
     text-align: center;
     text-decoration: none;
     display: inline-block;
     font-size: 16px;
     margin: 4px 2px;
     cursor: pointer;
-    border-radius: 4px;
+    border-radius: 15px;
+}
+
+button:hover {
+    background-color: #00429d;
+    color: white;
+}
+
+button.active {
+    background-color: #00429d;
+    color: white;
 }
 
 .axis-label {
@@ -41,11 +82,62 @@ button {
     font-size: 12px;
     fill: #333;
 }
+
 .year-label {
-    font-size: 24px;
-    fill: #333;
+    font-size: 30px;
+    fill: #00429d;
     text-anchor: middle;
+    display: flex;
+    justify-content: center;
+    align-items: center;
     width: 100%;
-    margin: 20px 0;
+    padding-bottom: 10px;
+    padding-top: 5px;
 }
 
+.toggle_switch {
+    --false: #00429d;
+    --true: #00429d;
+    padding-left: 10%;
+    padding-right: 5%;
+   }
+   
+input[type=checkbox] {
+    width: 50px;
+    height: 3px;
+    border-radius: 5px;  
+    background: #b1b1b1;
+    outline: none;
+    opacity: 0.7;
+    -webkit-transition: .2s;
+    transition: opacity .2s;
+    appearance: none;
+    position: relative;
+    cursor: pointer;
+   }
+
+input:hover {
+    opacity: 1; /* Fully shown on mouse-over */
+  }
+   
+input[type=checkbox]::before {
+    content: '';
+    display: block;
+    appearance: none;
+    width: 10px;
+    height: 10px;
+    border-radius: 100%; 
+    background: #00429d;
+    cursor: pointer;
+    transform: translate(-50%, -50%);
+    position: absolute;
+    top: 50%;
+    left: calc(0.9em/1);
+    background-color: var(--false);
+    transition: .3s ease;
+   }
+   
+input[type=checkbox]:checked::before {
+    background-color: var(--true);
+    left: calc(100% - (0.9em/1));
+   }

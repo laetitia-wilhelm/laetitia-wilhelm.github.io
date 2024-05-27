@@ -39,6 +39,7 @@ playButton.on("click", () => {
     } else {
         pause();
     }
+    playButton.classed("active", isPlaying);
 });
 
 const genderToggle = d3.select("#gender-toggle");
@@ -52,8 +53,12 @@ const play = () => {
     playButton.text("Pause");
     interval = setInterval(() => {
         yearIndex = (yearIndex + 1) % years.length;
-        update(years[yearIndex]);
-        slider.property("value", yearIndex);
+        if (yearIndex === 0) {
+            pause();
+        } else {
+            update(years[yearIndex]);
+            slider.property("value", yearIndex);
+        }
     }, 1000);
 };
 
@@ -120,7 +125,7 @@ const update = year => {
         .style("font-size", "12px")
         .text(d => {
             if (d.medals.total !== 0) {
-                return `Best Time: 0${Math.floor(d.bestTime / 60)}:${(Math.floor(d.bestTime) % 60).toString().padStart(2, '0')}.${Math.floor((d.bestTime % 1) * 100)}`;
+                return `Best Time: 0${Math.floor(d.bestTime / 60)}:${(Math.floor(d.bestTime) % 60).toString().padStart(2, '0')}.${Math.round((d.bestTime % 1) * 100).toString().padStart(2, '0')}`;
             } else {
                 return "";
             }
@@ -132,7 +137,7 @@ const update = year => {
         .attr("y", d => y(d.name) + y.bandwidth() / 2)
         .text(d => {
             if (d.medals.total !== 0) {
-                return `Best Time: 0${Math.floor(d.bestTime / 60)}:${(Math.floor(d.bestTime) % 60).toString().padStart(2, '0')}.${Math.floor((d.bestTime % 1) * 100)}`;
+                return `Best Time: 0${Math.floor(d.bestTime / 60)}:${(Math.floor(d.bestTime) % 60).toString().padStart(2, '0')}.${Math.round((d.bestTime % 1) * 100).toString().padStart(2, '0')}`;
             } else {
                 return "";
             }
@@ -456,4 +461,4 @@ const loadData = (dataUrl) => {
 };
 
 // Load the initial data
-loadData(menDataUrl);
+loadData(womenDataUrl);

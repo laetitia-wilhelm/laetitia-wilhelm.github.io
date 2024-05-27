@@ -62,23 +62,46 @@
     <main class="width-limited">
         <section class="times-section">
             <h2>Top-14 Countries Race Times as a Time-Series Bar Chart</h2>
-            <p>Through a time-series bar chart, we want to illustrate the chronometric performance trends of the top-k countries across various sporting events. This visualization will offer a chronological perspective, allowing users to discern patterns and fluctuations in athletic performance over time. This can also be applied per gender.</p>
+            <p>Through a time-series bar chart, we want to illustrate the chronometric performance trends of the top-14 countries in the 1500m event across various years. This visualization will offer a chronological perspective, allowing users to discern patterns and fluctuations in athletic performance over time. This can also be applied per gender.</p>
         </section>
+        <div>
+            <p>
+                
+            </p>
+        </div>
         <div class="controls">
             <button id="play-pause">Play</button>
             <input type="range" id="slider" class="slider" min="0" max="0" step="1" value="0">
+            <label class="toggle_switch">
+                Men <input type="checkbox" id="gender-toggle" checked="">Women
+            </label>
+        </div>
+        <div class="year-label">   
+            Year -  <span id="year-label"></span>
         </div>
     
-        <div>
-            <label for="gender-toggle">Men</label>
-            <input type="checkbox" id="gender-toggle">
-            <label for="gender-toggle">Women</label>
-        </div>
-        
         <svg width="1250" height="700"></svg>
-        <div id="year-label"></div>
         <script src="elisa_script.js"></script>
+
+        <p> 
+            This graph visualizes the chronometric trends of top countries in the Olympic 1500m race over a century. Data from 1896 onwards shows consistent improvement in race performance, especially in Men's events, reflecting advancements in training and nutrition. The general decline of the times over the years is cartainly a reflection of the advancements in training techniques and nutrition, but more importantly the popularity of the Olympic games, welcoming today only the top performing athletes. 
+            In terms of results, we can see that the United States, Australia, and Great Britain frequently appear with the best race times for me, indicating their historical dominance in middle-distance running. Finland's notable performance surge in the early 20th century is also highlighted. Medal counts further reinforce the dominance of the USA, which consistently leads in both participation and success.
+            This graph not only chronicles the evolution of athletic performance but also underscores the influence of socio-political events on international sports: the absence of data in 1916 and 1940 corresponds with the disruptions caused by World War I and World War II, respectively, illustrating the impact of global events on the Olympics. 
+            Starting in the 21st century, the competition becomes more and more global and emerging nations invest more in athletics, as clearly depicted with the arrival of Kenya in top1 position. The trend of improving race times is expected to continue, setting the stage for future record-breaking performances.
+        
+        </p>
+        <section>
+            
+        </section>
+        <section class="times-section">
+            <h2>Chronometric Time Comparaison Through Decades</h2>
+            <p>Through this sports race animation, we want to provide the viewer with a better understanding and perception of the athletes' performance evolution over time in the 1500m event. To achieve this, the gold medal time was chosen at 8 different key moments of the past 120 years, and depicted in a visual representation, all competing against one another.
+                This chronological perspective does provide a better sense of just how much top athletes have pushed the boundaries of what we believed to be possible. Only the male event is depicted here.</p>
+        </section>
+
+        <div class="flourish-embed flourish-sports" data-src="visualisation/18123690"><script src="https://public.flourish.studio/resources/embed.js"></script></div>
     </main>
+
   
 
 
