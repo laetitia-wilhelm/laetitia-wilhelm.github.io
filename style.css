@@ -267,6 +267,15 @@ nav {
 	justify-content: center; /* Horizontally center items */
 }
 
+nav .width-limited {
+    display: flex;
+    justify-content: flex-end; /* Align items to the right */
+    align-items: center; /* Vertically center items */
+    width: 100%;
+    max-width: 75%; /* Limit the width of the container */
+    box-sizing: border-box; 
+}
+
 nav ul {
 	margin: 0;
 	padding: 0;
@@ -465,6 +474,10 @@ nav a {
     padding: 0 20px;
     overflow: hidden; /* Crop image */
     position: relative; /* Keep position relative */
+}
+
+.align-right {
+    margin-left: auto;
 }
 
 #medal-showcase h1 {
