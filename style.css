@@ -466,7 +466,7 @@ nav a {
 #medal-showcase {
     margin-top: 3.5rem;
     background-image: url(images/map.jpg);
-    height: 40vh; /* Reduce height to crop vertically */
+    height: 40vh;
     background-size: cover;
     background-position: center;
     display: flex;
@@ -476,7 +476,7 @@ nav a {
     text-align: center;
     padding: 0 20px;
     overflow: hidden; /* Crop image */
-    position: relative; /* Keep position relative */
+    position: relative; 
 }
 
 .align-right {
@@ -527,7 +527,7 @@ nav a {
 #team-showcase {
     margin-top: 3.5rem;
     background-image: url(images/team.jpeg);
-    height: 40vh; /* Reduce height to crop vertically */
+    height: 40vh; 
     background-size: cover;
     background-position: center;
     display: flex;
@@ -563,7 +563,7 @@ nav a {
 
 
 #map-section {
-    max-width: none; /* Override the max-width limitation */
+    max-width: none; 
     width: 100%;
     display: flex;
     flex-direction: column;
@@ -574,33 +574,33 @@ nav a {
 #wrapper {
     display: flex;
     justify-content: space-between;
-    align-items: flex-start; /* Ensure the items are aligned at the top */
-    width: 100%; /* Ensure it takes full width */
+    align-items: flex-start; 
+    width: 100%; 
 }
 
 #container_map {
     width: 80%;
-    height: 500px; /* Adjust height as needed */
+    height: 500px; 
 }
 
 #info {
     width: 30%;
-    margin-top: 20px; /* Adjust margin as needed */
+    margin-top: 20px; 
 }
 
 
 #country-chart {
-    flex: 0 0 20%; /* Set width to 20% and prevent growing or shrinking */
-    margin-top: 20px; /* Add margin at the top for spacing */
+    flex: 0 0 20%; 
+    margin-top: 20px; 
 }
 
 
 
 /* Change the color of the exporting button */
 .highcharts-exporting-group .highcharts-button-box {
-    fill: transparent; /* Change the fill color */
-    stroke: var(--blue-shade-3); /* Change the border color */
-    stroke-width: 0px; /* Adjust the border width */
+    fill: transparent; 
+    stroke: var(--blue-shade-3); 
+    stroke-width: 0px; 
 }
 
 /* button for histogram */
@@ -610,12 +610,12 @@ nav a {
     margin-bottom: 20px;
 }
 select {
-    color: var(--blue-shade-1); /* Change the text color to blue */
-    background-color: #f2f2f2; /* Change the background color */
-    border: 2px solid #54bb90; /* Change the border color */
-    padding: 10px; /* Add padding for better appearance */
-    border-radius: 5px; /* Add border radius for rounded corners */
-    font-size: 16px; /* Adjust font size */
+    color: var(--blue-shade-1); /* text color */
+    background-color: #f2f2f2; 
+    border: 2px solid #54bb90; 
+    padding: 10px; 
+    border-radius: 5px; 
+    font-size: 16px; 
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
@@ -642,11 +642,11 @@ html {
 }
 
 
-/* Add the active button CSS here */
+/* navigation */
 .nav-button.active {
-    background-color: var(--orange-shade-6); /* Orange color */
-    color: white; /* Text color for contrast */
-    border: none; /* Remove border */
+    background-color: var(--orange-shade-6); 
+    color: white; 
+    border: none; 
 }
 
 .section {
@@ -668,5 +668,5 @@ html {
 }
 
 .intro-text {
-margin-bottom: 20px; /* Add margin to separate the intro text from buttons */
+margin-bottom: 20px;
 }
