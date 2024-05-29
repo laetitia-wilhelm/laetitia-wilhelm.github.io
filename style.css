@@ -73,8 +73,10 @@ a {
 }
 
 a:hover {
-    color: var(--link-hover-color);
+    color: var(--orange-shade-6);
 }
+
+
 
 /* Justify paragraphs */
 p {
@@ -197,7 +199,6 @@ nav img {
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 2rem 0;
     background-color: var(--blue-shade-2);
 }
 
@@ -208,9 +209,11 @@ figure embed {
 #page-container {
     position: relative;
     min-height: 20vh;
+    margin-top: 20px;
 }
 
 #content-wrap {
+    margin-top: 200px;
     padding-bottom: 20vh; /* Footer height */
     background: var(--blue-shade-2);
 }
@@ -613,6 +616,7 @@ select {
     padding: 10px; /* Add padding for better appearance */
     border-radius: 5px; /* Add border radius for rounded corners */
     font-size: 16px; /* Adjust font size */
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
 .nav-button {
@@ -628,12 +632,21 @@ select {
     font-size: 16px;
     cursor: pointer;
     transition: background-color 0.3s ease;
+    box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 .nav-button:hover {
     background-color: var(--orange-shade-6);
 }
 html {
     scroll-behavior: smooth;
+}
+
+
+/* Add the active button CSS here */
+.nav-button.active {
+    background-color: var(--orange-shade-6); /* Orange color */
+    color: white; /* Text color for contrast */
+    border: none; /* Remove border */
 }
 
 .section {

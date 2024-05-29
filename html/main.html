@@ -1,0 +1,109 @@
+
+<script src="../javascript/countdown.js"></script>
+<link rel="stylesheet" href="../style/countdown.css"> 
+
+<!DOCTYPE html>
+<html>
+<head>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  /* The image used */
+  background-image: url("../data/laeti/ParisOlympic.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Flexbox to center the button */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+.main-button {
+    position: absolute;
+    top: 50%; /* Position at half page height */
+    right: 10%; /* Position from right */
+    transform: translateY(-50%); /* Center vertically */
+    padding: 20px 40px; /* Increased padding for a bigger button */
+    font-size: 24px; /* Larger font size */
+    color: white; /* White text color */
+    background-color: #d4af37; /* Gold color */
+    background-image: linear-gradient(145deg, #d4af37, #ffd700); /* Gradient for gold effect */
+    border: none;
+    font-family: 'Lucida Handwriting', cursive;
+    border-radius: 10px; /* More rounded corners */
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Shadow below the button */
+                0 2px 4px rgba(255, 255, 255, 0.2); /* White shadow on the button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    animation: move 1s infinite alternate; /* Animation for moving effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.743); /* Black shadow for text */
+}
+
+.main-button:hover {
+    background-color: #b8860b; /* Darker gold on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), /* Darker shadow on hover */
+                0 4px 6px rgba(255, 255, 255, 0.25); /* Slightly larger white shadow on hover */
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-50%) translateX(0); /* Initial position */
+    }
+    100% {
+        transform: translateY(-50%) translateX(-10px); /* Move slightly to the left */
+    }
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+</style>
+</head>
+<body>
+
+  <div class="background">
+    <div class="countdown-container">
+      <div id="countdown">
+        <ul>
+          <li><div class="number-box"><span id="days"></span>days</div></li>
+          <li><div class="number-box"><span id="hours"></span>Hours</div></li>
+          <li><div class="number-box"><span id="minutes"></span>Minutes</div></li>
+          <li><div class="number-box"><span id="seconds"></span>Seconds</div></li>
+        </ul>
+      </div>
+    </div>
+    <button class="main-button" onclick="fadeOutAndRedirect('../index.html')">Enter</button>
+  </div>
+
+
+</body>
+</html>
+<script>
+        function fadeOutAndRedirect(url) {
+            // Apply fade-out effect to the body or a container wrapping the entire content
+            document.body.classList.add('fade-out');
+            
+            // Redirect to the URL after a short delay
+            setTimeout(function() {
+                window.location.href = url;
+            }, 600); // Match the duration of the fade-out transition
+        }
+  </script>
