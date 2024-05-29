@@ -12,10 +12,11 @@
 
     <link rel="stylesheet" href="style.css">
     <link rel="stylesheet" href="elisa_style.css">
-    <link rel="stylesheet" href="animate.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://d3js.org/d3.v6.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/xlsx/0.17.0/xlsx.full.min.js"></script>
+    <script src="./javascript/fadOut.js" ></script>
+
     <!-- <style>
         .bar {
             fill: steelblue;
@@ -44,7 +45,7 @@
 <body>
 
     <nav>
-        <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img">
+        <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img" onclick="fadeOutAndRedirect('./html/main.html')" style="cursor: pointer;">
         <ul class="width-limited">
             <li><a href="index.html">Home</a></li>
             <li><a href="description.html">Description</a></li>

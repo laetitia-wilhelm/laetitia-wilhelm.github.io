@@ -11,14 +11,15 @@
     <meta name="author" content="Your Name">
 
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animate.css">
     <script src="https://unpkg.com/scrollreveal"></script>
+    <script src="./javascript/fadOut.js" ></script>
+
 </head>
 
 <body class="description-page">
 
     <nav>
-        <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img">
+        <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img" onclick="fadeOutAndRedirect('./html/main.html')" style="cursor: pointer;">
         <ul class="width-limited">
             <li><a href="index.html">Home</a></li>
             <li><a href="description.html" style="color:  #55b68d;">Description</a></li>
@@ -26,6 +27,7 @@
             <li><a href="world_medals.html">World Medals</a></li>
             <li><a href="race_strategies.html">Race Strategies</a></li>
             <li><a href="team.html">Team</a></li>
+            
         </ul>
     </nav>
 
