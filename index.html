@@ -1,26 +1,23 @@
-<!doctype html>
+<!DOCTYPE html>
 <html lang="en">
-
 <head>
-    <meta charset="utf-8">
-    <meta http-equiv="content-type" content="text/html; charset=utf-8">
+    <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
     <title>Welcome to our Olympic 1500m Race Visualization</title>
     <meta name="description" content="Explore race statistics and strategies of Olympic 1500m finalists through data visualization">
     <meta name="author" content="Elisa, Laetitia & Paul">
-
-    <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@400;700&family=Playfair+Display:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="animate.css">
-    <script src="https://unpkg.com/scrollreveal"></script>
+    <link rel="stylesheet" href="./style/table.css">
+    <script src="https://d3js.org/d3.v7.min.js"></script>
+    <script src="./data/laeti/Intro/schedule.js" defer></script>
+    <script src="./data/laeti/Intro/topPlayers.js" defer></script>
+    <script src="./javascript/tableTransition.js" defer></script>
+    <script src="./javascript/fadOut.js" ></script>
 </head>
-
 <body>
-
     <header id="home-showcase">
         <nav>
-            <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img">
+            <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img" onclick="fadeOutAndRedirect('./html/main.html')" style="cursor: pointer;">
             <ul class="width-limited">
                 <li><a href="index.html" style="color:  #55b68d;">Home</a></li>
                 <li><a href="description.html">Description</a></li>
@@ -30,12 +27,18 @@
                 <li><a href="team.html">Team</a></li>
             </ul>
         </nav>
-
         <h1 class="animated-title">1500m Olympic Finals</h1>        
     </header>
 
+    <style>
+        .fade-out {
+            opacity: 0;
+            transition: opacity 1s ease;
+        }
+    </style>
+
     <main class="width-limited">
-        <h4>Introduction</h4>
+        <h4>Welcome</h4>
         <p>
             Welcome to our data visualization project, where we explore statistics and race strategies of Olympic 1500m finalists.
             By analyzing split time data and mean speeds, we aim to categorize athletes' strategies and uncover insights
@@ -46,68 +49,101 @@
             by elite athletes in the pursuit of Olympic glory.
             Learn more <a href="description.html">about our project</a> and the <a href="data.html">sources of our data</a>.
         </p>
-
         <div class="box">
-            <h4>Current Visualizations</h4>
+            <h4>Current News</h4>
             <p>
-                Click on any of the plot previews below to interact with them, to activate animations and explore the data in depth.
-                We have currently placed our sketches as placeholders until we fully implement these tools.
+                Stay up-to-date with the latest news in the world of 1500m athletics! 
+                Check the <a href="#intro-schedule">schedule</a> for the 1500m Olympic races in Paris, as well as the <a href="#intro-ranking">current rankings</a> of the athletes. 
+                We are happy to take you into the journey of discovering the incredible performances of the athletes.
             </p>
         </div>
+
+        <section id="intro-schedule" class="section-intro">
+            <div class="toggle-buttons">
+                <h2>1500m Paris 2024 schedule</h2>
+                <h5>Click <a href="https://olympics.com/en/paris-2024/schedule/athletics">here</a> to see the schedule of the Olympic games</h5>
+                <button class="nav-button" onclick="showSchedule('men', this)">Men</button>
+                <button class="nav-button" onclick="showSchedule('women', this)">Women</button>
+            </div>
+            <div class="table-container schedule-container">
+                <div id="men-schedule" class="active">
+                    <table id="men-schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Round</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="women-schedule" class="hidden">
+                    <table id="women-schedule-table">
+                        <thead>
+                            <tr>
+                                <th>Date</th>
+                                <th>Time</th>
+                                <th>Round</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+            <h5>Watch this trailer to get in the mood of the Olympic Games !!</h5>
+            <div class="video-wrapper">
+                <iframe id="videoFrame" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8cnpgn?autoplay=0" 
+                allowfullscreen title="Dailymotion Video Player" loop></iframe>
+            </div>
+        </section>
+
+        <section id="intro-ranking" class="section-intro">
+            <div class="toggle-buttons">
+                <h2>Current Ranking 1500m</h2>
+                <button class="nav-button" onclick="showPlayers('men', this)">Men</button>
+                <button class="nav-button" onclick="showPlayers('women', this)">Women</button>
+            </div>
+            <div class="table-container ranking-container">
+                <div id="men-players" class="active">
+                    <table id="men-players-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Athlete</th>
+                                <th>Country</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+                <div id="women-players" class="hidden">
+                    <table id="women-players-table">
+                        <thead>
+                            <tr>
+                                <th>Rank</th>
+                                <th>Athlete</th>
+                                <th>Country</th>
+                                <th>Score</th>
+                            </tr>
+                        </thead>
+                        <tbody></tbody>
+                    </table>
+                </div>
+            </div>
+        </section>
     </main>
 
-    <!-- Sketches Section -->
-    <section class="sketches">
-        <div class="sketch">
-            <a href="country_times.html">
-                <img src="images/sketch1.PNG" alt="Sketch 1">
-                <p>Top-k Countries Race Times as a Time-Series Bar Chart</p>
-            </a>
+    <div id="page-container" style="display: flex; justify-content: center; align-items: center; width: 100%;">
+        <div id="content-wrap" style="text-align: center; color: white; width: 100%;">
+            <h4 style="text-align: center; color: white;">Credits</h4>
+            <p style="text-align: center;">
+                Meet <a href="./team.html">the authors here</a>. This project was created for the <a
+                    href="http://edu.epfl.ch/coursebook/en/data-visualization-COM-480">Data Visualization</a> course at EPFL.
+            </p>
         </div>
-        <div class="sketch">
-            <a href="world_medals.html">
-                <img src="images/sketch2.JPG" alt="Sketch 2">
-                <p>World Map Medal Distribution by Country</p>
-            </a>
-        </div>
-        <div class="sketch">
-            <a href="race_strategies.html">
-                <img src="images/sketch3.jpg" alt="Sketch 3">
-                <p>Analyzing Race Strategies via Split Times</p>
-            </a>
-        </div>
-    </section>
-
-    <!-- Credits section -->
-    <div class="width-limited">
-        <h4>Credits</h4>
-        <p>
-            Meet <a href="./team.html">the authors here</a>. This project was created for the <a
-                href="http://edu.epfl.ch/coursebook/en/data-visualization-COM-480">Data Visualization</a> course at EPFL.
-        </p>
     </div>
-
-    <div id="page-container">
-        <div id="content-wrap">
-          <!-- all other page content -->
-        </div>
-        <footer id="footer"></footer>
-    </div>
-
-    <script>
-        // Initialize ScrollReveal
-        ScrollReveal().reveal('.box, .sketches', {
-            delay: 300,
-            distance: '50px',
-            origin: 'bottom',
-            opacity: null,
-            easing: 'ease-in-out',
-            duration: 1000,
-            reset: true // Reset animations when elements are hidden
-        });
-    </script>
-    
-
+    <footer id="footer"></footer>
 </body>
-
 </html>
