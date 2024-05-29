@@ -5,6 +5,8 @@
 <script src="https://code.highcharts.com/maps/modules/data.js"></script>
 <script src="https://code.highcharts.com/maps/modules/offline-exporting.js"></script>
 <script src="https://code.highcharts.com/maps/modules/accessibility.js"></script>
+<script src="./javascript/fadOut.js" ></script>
+
 
 
 <!DOCTYPE html>
@@ -20,7 +22,7 @@
 <body>
     <header id="medal-showcase">
         <nav>
-            <img src="images/Olympic_Athletics.png" alt="Olympic Athletics Logo" class="nav img">
+            <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img" onclick="fadeOutAndRedirect('./html/main.html')" style="cursor: pointer;">
             <ul class="width-limited">
                 <li><a href="index.html">Home</a></li>
                 <li><a href="description.html">Description</a></li>
@@ -38,12 +40,17 @@
 
     <main class="width-limited">
             <h2>Visualisation World Map Medal Distribution by Country</h2>
-            <p>Visualizing the distribution of Olympic medals by country is crucial to understanding each nation's athletic prowess. Our tool provides a comprehensive view of medal counts over the years, enabling users to explore trends and patterns.</p>
-            <p>The visualization will depict the number of medals won by countries over different time spans. By interacting with our tool, users can gain insights into the evolving dynamics of Olympic success.</p>
-            <p>To enhance user interaction, we've integrated features such as color-coded maps and interactive data sheets. Hovering over a country reveals detailed information, including total medal count and medal composition (gold, silver, bronze).</p>
-            <p>Furthermore, users can delve deeper into historical trends by clicking on countries to access year-by-year medal statistics. This layered approach enables a more nuanced analysis of sporting achievements over time.</p>
-            <p>Our aim is to create a visually appealing and user-friendly platform that facilitates exploration and understanding of Olympic medal data in a novel manner.</p>
-            <div style="text-align: center; margin: 20px;">
+            <p> Running has been part of the Olympic Games since they were first held in 1896. 
+            The competition programme, inspired by the ancient Greek Olympic Games, includes endurance, relay and hurdle races. 
+            The United States has been a dominant nation in these competitions, regularly ranking as the top nation in many editions of the Games.</p>
+            <p> Women's participation in running events has progressed over the years. Women first took part in the Olympic Games in 1900, 
+            but their participation was limited. It was only more than seventy years later, in 1972, that women were allowed to take part in the 1500
+             metre race. This marked an important step towards gender equality in athletics.</p>
+            <p> You can discover the history of the medal-winning countries in the 1500m discipline, as well as the names of the winners! 
+             There's also an interactive map showing the performances of countries in the various running disciplines. 
+             The participation of nations in the running disciplines varies considerably. The visualisations below do not take into account the number 
+             of participations.</p>
+            <div style="text-align: center; margin: 5%;">
                 <button class="nav-button" data-target="#histogram-section">Show History</button>
                 <button class="nav-button" data-target="#map-section">Show Map</button>
             </div>
@@ -52,6 +59,8 @@
         <section id="histogram-section" class="section">
             <div style="margin-bottom: 30px;"> <!-- Add margin to separate the heading from the select -->
                 <h2>History of Medals - 1500 m Discipline</h2>
+                <h6 style="margin-top: 2px;">Select a country to see it's performance over the years</h6>
+
             </div>
             <select id="countrySelect" style="margin-bottom: 30px;">
                 <option value="United States" selected>United States</option> <!-- Default country -->
@@ -66,7 +75,8 @@
         <section id="map-section" class="section center-section">
             <div style="margin-bottom: 30px;"> <!-- Add margin to separate the heading from the select -->
             <h2 >Performance in Running Disciplines</h2>
-            <h5 style="margin-top: 5px;">1500m - 800m - 400m -200m -100m</h5>
+            <h5 style="margin-top: 2px;">1500m - 800m - 400m -200m -100m</h5>
+            <h6 style="margin-top: 2px;">Click on a country to view medal distribution between disciplines</h6>
 
             </div>
             <div id="wrapper">
@@ -99,7 +109,7 @@
         });
 
         // Initialize ScrollReveal
-        ScrollReveal().reveal('h2, p, h5, button, h1', {
+        ScrollReveal().reveal('h2, p, h5, button, h1, h6', {
             delay: 300,
             distance: '50px',
             origin: 'bottom',
