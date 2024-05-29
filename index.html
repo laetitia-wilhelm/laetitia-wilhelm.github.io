@@ -1,149 +1,109 @@
+
+<script src="./javascript/countdown.js"></script>
+<link rel="stylesheet" href="./style/countdown.css"> 
+
 <!DOCTYPE html>
-<html lang="en">
+<html>
 <head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to our Olympic 1500m Race Visualization</title>
-    <meta name="description" content="Explore race statistics and strategies of Olympic 1500m finalists through data visualization">
-    <meta name="author" content="Elisa, Laetitia & Paul">
-    <link rel="stylesheet" href="style.css">
-    <link rel="stylesheet" href="./style/table.css">
-    <script src="https://d3js.org/d3.v7.min.js"></script>
-    <script src="./data/laeti/Intro/schedule.js" defer></script>
-    <script src="./data/laeti/Intro/topPlayers.js" defer></script>
-    <script src="./javascript/tableTransition.js" defer></script>
-    <script src="./javascript/fadOut.js" ></script>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<style>
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+.background {
+  /* The image used */
+  background-image: url("./data/laeti/ParisOlympic.jpg");
+
+  /* Full height */
+  height: 100%; 
+
+  /* Center and scale the image nicely */
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  /* Flexbox to center the button */
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+.main-button {
+    position: absolute;
+    top: 50%; /* Position at half page height */
+    right: 10%; /* Position from right */
+    transform: translateY(-50%); /* Center vertically */
+    padding: 20px 40px; /* Increased padding for a bigger button */
+    font-size: 24px; /* Larger font size */
+    color: white; /* White text color */
+    background-color: #d4af37; /* Gold color */
+    background-image: linear-gradient(145deg, #d4af37, #ffd700); /* Gradient for gold effect */
+    border: none;
+    font-family: 'Lucida Handwriting', cursive;
+    border-radius: 10px; /* More rounded corners */
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), /* Shadow below the button */
+                0 2px 4px rgba(255, 255, 255, 0.2); /* White shadow on the button */
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease; /* Smooth transition */
+    animation: move 1s infinite alternate; /* Animation for moving effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.743); /* Black shadow for text */
+}
+
+.main-button:hover {
+    background-color: #b8860b; /* Darker gold on hover */
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15), /* Darker shadow on hover */
+                0 4px 6px rgba(255, 255, 255, 0.25); /* Slightly larger white shadow on hover */
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-50%) translateX(0); /* Initial position */
+    }
+    100% {
+        transform: translateY(-50%) translateX(-10px); /* Move slightly to the left */
+    }
+}
+
+/* Fade-out effect */
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+</style>
 </head>
 <body>
-    <header id="home-showcase">
-        <nav>
-            <img src="images/Olympic_Athletics.png" alt="c Marcomogollon" class="nav img" onclick="fadeOutAndRedirect('./html/main.html')" style="cursor: pointer;">
-            <ul class="width-limited">
-                <li><a href="index.html" style="color:  #55b68d;">Home</a></li>
-                <li><a href="description.html">Description</a></li>
-                <li><a href="country_times.html">Country Times</a></li>
-                <li><a href="world_medals.html">World Medals</a></li>
-                <li><a href="race_strategies.html">Race Strategies</a></li>
-                <li><a href="team.html">Team</a></li>
-            </ul>
-        </nav>
-        <h1 class="animated-title">1500m Olympic Finals</h1>        
-    </header>
 
-    <style>
-        .fade-out {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-    </style>
-
-    <main class="width-limited">
-        <h4>Welcome</h4>
-        <p>
-            Welcome to our data visualization project, where we explore statistics and race strategies of Olympic 1500m finalists.
-            By analyzing split time data and mean speeds, we aim to categorize athletes' strategies and uncover insights
-            into their performance tactics.
-        </p>
-        <p>
-            Explore the trends and patterns of sit and kick, negative split, front running, and even pace strategies employed
-            by elite athletes in the pursuit of Olympic glory.
-            Learn more <a href="description.html">about our project</a> and the <a href="data.html">sources of our data</a>.
-        </p>
-        <div class="box">
-            <h4>Current News</h4>
-            <p>
-                Stay up-to-date with the latest news in the world of 1500m athletics! 
-                Check the <a href="#intro-schedule">schedule</a> for the 1500m Olympic races in Paris, as well as the <a href="#intro-ranking">current rankings</a> of the athletes. 
-                We are happy to take you into the journey of discovering the incredible performances of the athletes.
-            </p>
-        </div>
-
-        <section id="intro-schedule" class="section-intro">
-            <div class="toggle-buttons">
-                <h2>1500m Paris 2024 schedule</h2>
-                <h5>Click <a href="https://olympics.com/en/paris-2024/schedule/athletics">here</a> to see the schedule of the Olympic games</h5>
-                <button class="nav-button" onclick="showSchedule('men', this)">Men</button>
-                <button class="nav-button" onclick="showSchedule('women', this)">Women</button>
-            </div>
-            <div class="table-container schedule-container">
-                <div id="men-schedule" class="active">
-                    <table id="men-schedule-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Round</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <div id="women-schedule" class="hidden">
-                    <table id="women-schedule-table">
-                        <thead>
-                            <tr>
-                                <th>Date</th>
-                                <th>Time</th>
-                                <th>Round</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-            <h5>Watch this trailer to get in the mood of the Olympic Games !!</h5>
-            <div class="video-wrapper">
-                <iframe id="videoFrame" frameborder="0" type="text/html" src="https://www.dailymotion.com/embed/video/x8cnpgn?autoplay=0" 
-                allowfullscreen title="Dailymotion Video Player" loop></iframe>
-            </div>
-        </section>
-
-        <section id="intro-ranking" class="section-intro">
-            <div class="toggle-buttons">
-                <h2>Current Ranking 1500m</h2>
-                <button class="nav-button" onclick="showPlayers('men', this)">Men</button>
-                <button class="nav-button" onclick="showPlayers('women', this)">Women</button>
-            </div>
-            <div class="table-container ranking-container">
-                <div id="men-players" class="active">
-                    <table id="men-players-table">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Athlete</th>
-                                <th>Country</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-                <div id="women-players" class="hidden">
-                    <table id="women-players-table">
-                        <thead>
-                            <tr>
-                                <th>Rank</th>
-                                <th>Athlete</th>
-                                <th>Country</th>
-                                <th>Score</th>
-                            </tr>
-                        </thead>
-                        <tbody></tbody>
-                    </table>
-                </div>
-            </div>
-        </section>
-    </main>
-
-    <div id="page-container" style="display: flex; justify-content: center; align-items: center; width: 100%;">
-        <div id="content-wrap" style="text-align: center; color: white; width: 100%;">
-            <h4 style="text-align: center; color: white;">Credits</h4>
-            <p style="text-align: center;">
-                Meet <a href="./team.html">the authors here</a>. This project was created for the <a
-                    href="http://edu.epfl.ch/coursebook/en/data-visualization-COM-480">Data Visualization</a> course at EPFL.
-            </p>
-        </div>
+  <div class="background">
+    <div class="countdown-container">
+      <div id="countdown">
+        <ul>
+          <li><div class="number-box"><span id="days"></span>days</div></li>
+          <li><div class="number-box"><span id="hours"></span>Hours</div></li>
+          <li><div class="number-box"><span id="minutes"></span>Minutes</div></li>
+          <li><div class="number-box"><span id="seconds"></span>Seconds</div></li>
+        </ul>
+      </div>
     </div>
-    <footer id="footer"></footer>
+    <button class="main-button" onclick="fadeOutAndRedirect('./home.html')">Enter</button>
+  </div>
+
+
 </body>
 </html>
+<script>
+        function fadeOutAndRedirect(url) {
+            // Apply fade-out effect to the body or a container wrapping the entire content
+            document.body.classList.add('fade-out');
+            
+            // Redirect to the URL after a short delay
+            setTimeout(function() {
+                window.location.href = url;
+            }, 600); // Match the duration of the fade-out transition
+        }
+  </script>
