@@ -30,12 +30,6 @@
         <h1 class="animated-title">1500m Olympic Finals</h1>        
     </header>
 
-    <style>
-        .fade-out {
-            opacity: 0;
-            transition: opacity 1s ease;
-        }
-    </style>
 
     <main class="width-limited">
         <h4>Welcome</h4>
@@ -59,7 +53,7 @@
         </div>
 
         <section id="intro-schedule" class="section-intro">
-            <div class="toggle-buttons">
+            <div class="switch-buttons">
                 <h2>1500m Paris 2024 schedule</h2>
                 <h5>Click <a href="https://olympics.com/en/paris-2024/schedule/athletics">here</a> to see the schedule of the Olympic games</h5>
                 <button class="nav-button" onclick="showSchedule('men', this)">Men</button>
@@ -99,7 +93,7 @@
         </section>
 
         <section id="intro-ranking" class="section-intro">
-            <div class="toggle-buttons">
+            <div class="switch-buttons">
                 <h2>Current Ranking 1500m</h2>
                 <button class="nav-button" onclick="showPlayers('men', this)">Men</button>
                 <button class="nav-button" onclick="showPlayers('women', this)">Women</button>
@@ -128,7 +122,7 @@
                                 <th>Score</th>
                             </tr>
                         </thead>
-                        <tbody></tbody>
+                        <tbody></tbody> <!-- Rows inserted here -->
                     </table>
                 </div>
             </div>

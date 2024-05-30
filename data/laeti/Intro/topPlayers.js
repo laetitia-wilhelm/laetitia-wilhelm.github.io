@@ -27,6 +27,7 @@ const topPlayers = {
     ]
 };
 
+/*dynamic row population of the table*/
 function renderTopPlayers(gender) {
     const playersTable = d3.select(`#${gender}-players-table tbody`);
 

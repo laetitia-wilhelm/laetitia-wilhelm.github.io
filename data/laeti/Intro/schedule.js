@@ -15,10 +15,11 @@ const schedules = {
     ]
 };
 
+/*dynamic row population of the table*/
 function renderSchedule(gender) {
     const scheduleTable = d3.select(`#${gender}-schedule-table tbody`);
 
-    scheduleTable.selectAll('tr')
+    scheduleTable.selectAll('tr') 
         .data(schedules[gender])
         .enter()
         .append('tr')
