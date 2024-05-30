@@ -14,6 +14,7 @@
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
     <script src="./javascript/fadOut.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/chart.js"></script>
     <style>
         .nav img {
             width: 50px;
@@ -95,7 +96,68 @@
                 </ul>
             </ul>
             </p>
+            <canvas id="pacingChart" width="800" height="400"></canvas>
         </section>
+        <script>
+            const ctx = document.getElementById('pacingChart').getContext('2d');
+            const pacingChart = new Chart(ctx, {
+                type: 'line',
+                data: {
+                    labels: ['Start', '25%', '50%', '75%', 'Finish'],
+                    datasets: [
+                        {
+                            label: 'Front-running Strategy',
+                            data: [1, 0.9, 0.85, 0.85, 0.85],
+                            borderColor: 'rgba(255, 99, 132, 1)',
+                            backgroundColor: 'rgba(255, 99, 132, 0.2)',
+                            fill: false,
+                        },
+                        {
+                            label: 'Sit and Kick Strategy',
+                            data: [0.6, 0.6, 0.6, 0.6, 1],
+                            borderColor: 'rgba(54, 162, 235, 1)',
+                            backgroundColor: 'rgba(54, 162, 235, 0.2)',
+                            fill: false,
+                        },
+                        {
+                            label: 'Negative Split Strategy',
+                            data: [0.6, 0.7, 0.8, 0.9, 1],
+                            borderColor: 'rgba(75, 192, 192, 1)',
+                            backgroundColor: 'rgba(75, 192, 192, 0.2)',
+                            fill: false,
+                        },
+                        {
+                            label: 'Even Pace Strategy',
+                            data: [0.8, 0.8, 0.8, 0.8, 0.8],
+                            borderColor: 'rgba(153, 102, 255, 1)',
+                            backgroundColor: 'rgba(153, 102, 255, 0.2)',
+                            fill: false,
+                        }
+                    ]
+                },
+                options: {
+                    responsive: true,
+                    scales: {
+                        x: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Race Progress'
+                            }
+                        },
+                        y: {
+                            display: true,
+                            title: {
+                                display: true,
+                                text: 'Relative Speed'
+                            },
+                            min: 0,
+                            max: 1.2
+                        }
+                    }
+                }
+            });
+        </script>
         <section class="explanations-section">
             <button id="toggleButton" onclick="toggleData()">Displayed Year: 2020</button>
             <div id="splitTimesChart"></div>
