@@ -11,7 +11,7 @@
         console.log("Medal Json loaded:", medalJson);*/
 
         // Fetch medal data JSON
-        const data = await fetch('../data/medals.json')
+        const data = await fetch('../data/laeti/map/medals.json')
             .then(response => response.json());
         console.log("Medal Json:", data);
 

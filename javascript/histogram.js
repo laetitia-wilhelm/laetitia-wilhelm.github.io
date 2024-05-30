@@ -2,7 +2,7 @@ document.addEventListener('DOMContentLoaded', function () {
     let combinedData;
 
     function fetchData() {
-        fetch('./mix_1500m.json')
+        fetch('../data/laeti/map/mix_1500m.json')
             .then(response => response.json())
             .then(data => {
                 combinedData = data;
@@ -83,7 +83,7 @@ document.addEventListener('DOMContentLoaded', function () {
                 formatter: function () {
                     let tooltip = `<b>${this.x} Winner </b><br/>`; // Year
 
-                    // Create an object to store winners for each medal type
+                    // store winners for each medal type
                     const winnersObj = {
                         gold: [],
                         silver: [],
