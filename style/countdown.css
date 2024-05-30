@@ -1,5 +1,69 @@
 
 
+body, html {
+  height: 100%;
+  margin: 0;
+  font-family: Arial, sans-serif;
+}
+
+/*source: https://olympics.com/cio/news/paris-2024-accueille-les-medias-internationaux-pour-un-point-de-situation-avant-les-jeux-olympiques-et-paralympiques*/
+.background {
+  background-image: url("../data/laeti/ParisOlympic.jpg");
+
+  height: 100%; 
+
+  background-position: center;
+  background-repeat: no-repeat;
+  background-size: cover;
+
+  display: flex;
+  justify-content: center;
+  align-items: flex-end;
+  position: relative;
+}
+
+
+.main-button {
+    position: absolute;
+    top: 50%; 
+    right: 10%; 
+    transform: translateY(-50%);
+    padding: 20px 40px;
+    font-size: 24px; 
+    color: white; 
+    background-color: #d4af37; 
+    background-image: linear-gradient(145deg, #d4af37, #ffd700); /*gold effect*/
+    border: none;
+    border-radius: 10px; 
+    cursor: pointer;
+    text-transform: uppercase;
+    box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1), 
+                0 2px 4px rgba(255, 255, 255, 0.2);
+    transition: background-color 0.3s ease, box-shadow 0.3s ease, transform 0.3s ease;
+    animation: move 1s infinite alternate; /*  moving effect */
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.743); 
+}
+
+.main-button:hover {
+    background-color: #b8860b;
+    box-shadow: 0 6px 8px rgba(0, 0, 0, 0.15),
+                0 4px 6px rgba(255, 255, 255, 0.25); 
+}
+
+@keyframes move {
+    0% {
+        transform: translateY(-50%) translateX(0); /* Initial position */
+    }
+    100% {
+        transform: translateY(-50%) translateX(-8%); /* Move to the left */
+    }
+}
+
+.fade-out {
+  opacity: 0;
+  transition: opacity 1s ease;
+}
+
 
 /* general styling */
 :root {
@@ -24,17 +88,17 @@
     flex-direction: column;
     justify-content: center;
     align-items: center;
-    background-color: white; /* White background for each time unit */
-    padding: 0.3em 0.8em; /* Adjust padding to reduce box size */
-    border-radius: 10px; /* Rounded corners */
+    background-color: white; 
+    padding: 0.3em 0.8em; 
+    border-radius: 10px;
     box-shadow: 0px 4px 15px rgba(255, 215, 0, 0.75); /* Golden shadow */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
-    margin: 0 5px; /* Reduce margin to decrease space between boxes */
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+    margin: 0 5px;
 }
   
   li .number-box:hover {
-    transform: translateY(-5px); /* Slight lift on hover */
-    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.75); /* Golden shadow */
+    transform: translateY(-5px); 
+    box-shadow: 0px 4px 15px rgba(0, 0, 0, 0.75); /* black shadow when hover*/
   }
 
 
@@ -52,8 +116,9 @@
     }
   }
 
+  /*align with the olympic logo*/
   .countdown-container {
     position: absolute;
-    bottom: 12%; /* Position from bottom */
-    left: 5%; /* Position from left */
+    bottom: 12%; 
+    left: 5%; 
     }

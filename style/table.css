@@ -1,8 +1,8 @@
 .table-container {
     display: flex;
-    justify-content: center; /* Center horizontally */
-    margin: 0 auto; /* Center horizontally */
-    max-width: 800px; /* Optional: Set maximum width */
+    justify-content: center; 
+    margin: 0 auto; 
+    max-width: 800px; 
     
 }
 
@@ -13,20 +13,23 @@
     clear: both;
 }
 
+/*paddin around*/
 .schedule-container, .ranking-container {
     padding: 10px;
 }
 
+/*forces the sub-container to take 100% width + not visible*/
 .schedule-container > div, .ranking-container > div {
-    width: 100%; /* Ensure each table takes full width */
-    transition: opacity 0.5s ease, transform 0.5s ease; /* Add transition for smooth effect */
-    opacity: 0; /* Start with hidden state */
+    width: 100%; 
+    transition: opacity 0.5s ease, transform 0.5s ease; /*  transition for smooth effect */
+    opacity: 0; 
     transform: translateY(-10px); /* Start with slight offset */
 }
 
+/*sub-container when active : full visiblility*/
 .schedule-container > div.active, .ranking-container > div.active {
-    opacity: 1; /* Fully visible when active */
-    transform: translateY(0); /* Reset transform when active */
+    opacity: 1; 
+    transform: translateY(0); /*move back*/
 }
 
 
@@ -36,29 +39,31 @@
 
 table {
     border-collapse: collapse;
-    margin: auto; /* Center horizontally */
+    margin: auto; 
     font-size: 0.9em;
-    font-family: sans-serif;
     min-width: 500px;
     box-shadow: 0 0 20px rgba(0, 0, 0, 0.15);
 }
 
+/*Header*/
 table thead tr {
     background-color: #009879;
     color: #ffffff;
     text-align: left;
 }
 
-
+/*border of the table*/
 th, td {
     border: 1px solid #ccc;
     padding: 10px;
     text-align: left;
 }
 
+/*background header*/
 th {
     background-color: #4574a5;
 }
+
 
 img.flag {
     width: 20px;
@@ -67,13 +72,13 @@ img.flag {
     margin-right: 5px;
 }
 
-.toggle-buttons {
+.switch-buttons {
     text-align: center;
     margin-bottom: 20px;
 }
 
 .video-wrapper {
-    width: 50%; /* Adjust the width as needed */
+    width: 50%; 
     margin-left: auto;
     margin-right: auto;
     position: relative;
@@ -88,8 +93,9 @@ img.flag {
     width: 100%;
 }
 
+/* section --> permits button*/
 .section-intro {
-    margin: 10px 0; /* Adjust the margin as needed */
+    margin: 10px 0;
     display: flex;
     flex-direction: column;
     align-items: center;

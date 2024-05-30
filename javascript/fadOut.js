@@ -1,9 +1,10 @@
+
+/* handle the transition and redirection to the index.html page*/
 function fadeOutAndRedirect(url) {
-    // Apply fade-out effect to the body or a container wrapping the entire content
+    // apply fade out from style.css to the body
     document.body.classList.add('fade-out');
     
-    // Redirect to the URL after a short delay
+    // delay redirection to the url
     setTimeout(function() {
-        window.location.href = url;
-    }, 600); // Match the duration of the fade-out transition
+        window.location.href = url;}, 600); 
 }
