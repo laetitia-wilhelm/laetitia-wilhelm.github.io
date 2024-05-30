@@ -10,23 +10,23 @@
             .then(response => response.json());
         console.log("Medal Json loaded:", medalJson);*/
 
-        // Fetch another medal data JSON
+        // Fetch medal data JSON
         const data = await fetch('../data/medals.json')
             .then(response => response.json());
         console.log("Medal Json:", data);
 
-        // Make codes uppercase to match the map data
+        // forces codes uppercase to match the map data
         data.forEach(p => {
             p.code = p.Nation.toUpperCase();
         });
 
-        // Extract disciplines dynamically from the data
+        // Extract disciplines
         const disciplines = ['1500', '800', '400', '200', '100'];
 
         // Extract medal types
         const medalTypes = ['Gold', 'Silver', 'Bronze'];
 
-        // Initialize the map chart
+        // Initialize the map
         const mapChart = Highcharts.mapChart('container_map', {
             chart: {
                 map: topology,
@@ -41,7 +41,7 @@
             },
 
             mapView: {
-                zoom: 2
+                zoom: 2 //forces to fill the map-container with the map
             },
 
             mapNavigation: {
@@ -63,6 +63,7 @@
                 symbolRadius: 0,
                 symbolHeight: 14
             },
+            /*green gradient for the countries*/
             colors: [
                 'rgba(173, 216, 230, 0.2)',  
                 'rgba(173, 216, 230, 0.6)',
@@ -100,11 +101,11 @@
                     }
                 },
                 animation: {
-                    duration: 1000
+                    duration: 1000 //1s
                 },
                 data: data,
                 colorKey: 'Total_full',
-                joinBy: ['iso-a3', 'code'],
+                joinBy: ['iso-a3', 'code'], //3 letters code
                 dataLabels: {
                     enabled: false,
                     color: '#FFFFFF',
@@ -116,6 +117,8 @@
                 },
                 allowPointSelect: true,
                 cursor: 'pointer',
+                //when click on the country
+                //change its color to orange
                 states: {
                     select: {
                         color: 'rgba(255, 153, 51, 0.5)',
@@ -123,6 +126,7 @@
                         dashStyle: 'shortdot'
                     }
                 },
+                // show histogram
                 point: {
                     events: {
                         click: function () {
@@ -133,100 +137,103 @@
             }]
         });
 
-        // Function to update histogram
-        const updateHistogram = (selectedPoint) => {
-            const selectedData = data.find(country => country.code === selectedPoint.code);
-            const seriesData = medalTypes.map(medal => {
-                return {
-                    name: medal,
-                    data: disciplines.map(discipline => selectedData[`${medal}_${discipline}`])
-                };
+    // Update histogram
+    const updateHistogram = (selectedPoint) => {
+        const selectedData = data.find(country => country.code === selectedPoint.code);
+        
+        //get data for the selected country
+        const seriesData = medalTypes.map(medal => {
+            return {
+                name: medal,
+                data: disciplines.map(discipline => selectedData[`${medal}_${discipline}`])
+            };
+        });
+
+        // Create the histogram
+        if (!window.histogramChart) {
+            window.histogramChart = Highcharts.chart('country-chart', {
+                chart: {
+                    type: 'column',
+                    backgroundColor: null
+                },
+                credits: {
+                    enabled: false
+                },
+                title: {
+                    text: `Medals won by ${selectedPoint.Nation}`
+                },
+                xAxis: {
+                    categories: disciplines,
+
+                    labels: {
+                        rotation: -45,
+                        formatter: function () {
+                            return this.value + ' m';
+                        }
+                    }
+                },
+                yAxis: {
+                    min: 0,
+                    title: {
+                        text: null,
+                    },
+                    allowDecimals: false,
+                    stackLabels: {
+                        enabled: true,
+                        style: {
+                            fontWeight: 'bold',
+                            color: (Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color) || 'gray'
+                        }
+                    }
+                },
+                
+                legend: {
+                    align: 'right',
+                    x: -30,
+                    verticalAlign: 'top',
+                    y: 25,
+                    floating: false,
+                    backgroundColor:
+                        null,
+                    borderColor: '#CCC',
+                    borderWidth: 1,
+                    shadow: false
+                },
+                tooltip: {
+                    headerFormat: '<b>{point.x} m</b><br/>',
+                    pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
+                },
+                plotOptions: {
+                    column: {
+                        stacking: 'normal',
+                        dataLabels: {
+                            enabled: true
+                        }
+                    }
+                },
+                series: seriesData.map((series, i) => ({
+                    ...series,
+                    color: i === 0 ? '#FFD700' : i === 1 ? '#C0C0C0' : '#CD7F32'
+                }))
             });
-
-            if (!window.histogramChart) {
-                window.histogramChart = Highcharts.chart('country-chart', {
-                    chart: {
-                        type: 'column',
-                        backgroundColor: null
+        } else {
+            window.histogramChart.update({
+                title: {
+                    text: `Medals won by ${selectedPoint.Nation}`,
+                    style : {
+                        color: '#00429d', //shade number 3
                     },
-                    credits: {
-                        enabled: false
-                    },
-                    title: {
-                        text: `Medals won by ${selectedPoint.Nation}`
-                    },
-                    xAxis: {
-                        categories: disciplines,
-
-                        labels: {
-                            rotation: -45,
-                            formatter: function () {
-                                return this.value + ' m'; // Append 'm' to the category value
-                            }
-                        }
-                    },
-                    yAxis: {
-                        min: 0,
-                        title: {
-                            text: null,
-                        },
-                        allowDecimals: false,
-                        stackLabels: {
-                            enabled: true,
-                            style: {
-                                fontWeight: 'bold',
-                                color: (Highcharts.defaultOptions.title.style && Highcharts.defaultOptions.title.style.color) || 'gray'
-                            }
-                        }
-                    },
-                    
-                    legend: {
-                        align: 'right',
-                        x: -30,
-                        verticalAlign: 'top',
-                        y: 25,
-                        floating: false,
-                        backgroundColor:
-                            null,
-                        borderColor: '#CCC',
-                        borderWidth: 1,
-                        shadow: false
-                    },
-                    tooltip: {
-                        headerFormat: '<b>{point.x} m</b><br/>',
-                        pointFormat: '{series.name}: {point.y}<br/>Total: {point.stackTotal}'
-                    },
-                    plotOptions: {
-                        column: {
-                            stacking: 'normal',
-                            dataLabels: {
-                                enabled: true
-                            }
-                        }
-                    },
-                    series: seriesData.map((series, i) => ({
-                        ...series,
-                        color: i === 0 ? '#FFD700' : i === 1 ? '#C0C0C0' : '#CD7F32'
-                    }))
-                });
-            } else {
-                window.histogramChart.update({
-                    title: {
-                        text: `Medals won by ${selectedPoint.Nation}`,
-                        style : {
-                            color: '#00429d', //shade number 3
-                        },
-                    },
-                    xAxis: {
-                        categories: disciplines
-                    },
-                    series: seriesData.map((series, i) => ({
-                        ...series,
-                        color: i === 0 ? '#FFD700' : i === 1 ? '#C0C0C0' : '#CD7F32'
-                    }))
-                });
-            }
-        };
+                },
+                xAxis: {
+                    categories: disciplines
+                },
+                series: seriesData.map((series, i) => ({
+                    ...series,
+                    color: i === 0 ? '#FFD700' : i === 1 ? '#C0C0C0' : '#CD7F32'
+                }))
+            });
+        }
+    };
 
     } catch (error) {
         console.error('Error:', error);
