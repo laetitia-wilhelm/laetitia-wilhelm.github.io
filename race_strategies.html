@@ -13,8 +13,52 @@
     <link rel="stylesheet" href="style.css">
     <script src="https://unpkg.com/scrollreveal"></script>
     <script src="https://cdn.plot.ly/plotly-latest.min.js"></script>
-    <script src="./javascript/fadOut.js" ></script>
-
+    <script src="./javascript/fadOut.js"></script>
+    <style>
+        .nav img {
+            width: 50px;
+            transition: transform 0.3s ease;
+        }
+        .nav img:hover {
+            transform: scale(1.1);
+        }
+        .animated-title {
+            animation: fadeInUp 1s ease-in-out;
+        }
+        @keyframes fadeInUp {
+            0% {
+                opacity: 0;
+                transform: translateY(20px);
+            }
+            100% {
+                opacity: 1;
+                transform: translateY(0);
+            }
+        }
+        .strategy-section ul {
+            list-style: none;
+        }
+        .strategy-section ul li {
+            margin-bottom: 10px;
+        }
+        .strategy-section ul li strong {
+            color: #55b68d;
+        }
+        button#toggleButton {
+            background-color: #55b68d;
+            color: white;
+            border: none;
+            padding: 10px 20px;
+            cursor: pointer;
+            transition: background-color 0.3s ease;
+        }
+        button#toggleButton:hover {
+            background-color: #459f7b;
+        }
+        #splitTimesChart, #splitTimesChart2, #positionsChart, #positionsChart2 {
+            margin: 20px 0;
+        }
+    </style>
 </head>
 
 <body>
@@ -38,18 +82,18 @@
         <section class="strategy-section">
             <h2>Analyzing Race Strategies via Split Times</h2>
             <p>Through interactive visualizations, we want to:
+            <ul>
+                <li>Understand and categorize race strategies and tactics by analyzing split times.</li>
+                <li>Offer viewers a granular understanding of athletes' performance throughout a race, allowing for deeper insights into their strategic approaches.</li>
+                <li>Go through the strengths and weaknesses of each strategy and the context in which they succeed or fail.</li>
+                <li>Generalize racing strategies into several categories that we will now define:</li>
                 <ul>
-                    <li>Understand and categorize race strategies and tactics by analyzing split times.</li>
-                    <li>Offer viewers a granular understanding of athletes' performance throughout a race, allowing for deeper insights into their strategic approaches.</li>
-                    <li>Go through the strengths and weaknesses of each strategy and the context in which they succeed or fail.</li>
-                    <li>Generalize racing strategies into several categories that we will now define:</li>
-                    <ul>
-                        <li>The <strong>front-running strategy</strong> typically involves a fast start to gap others to stop them from drafting the leader, then an even pace. This tactic is mostly used by more aerobic athletes to avoid being outsprinted.</li>
-                        <li>The <strong>sit and kick strategy</strong> has a slow start into an even pace then a strong finish.</li>
-                        <li>The <strong>negative split strategy</strong> has a slow start into a gradual speed increase until the end.</li>
-                        <li>The <strong>even pace strategy</strong> has no significant speed variations; an even pace is kept for the entire race.</li>
-                    </ul>
+                    <li>The <strong>front-running strategy</strong> typically involves a fast start to gap others to stop them from drafting the leader, then an even pace. This tactic is mostly used by more aerobic athletes to avoid being outsprinted.</li>
+                    <li>The <strong>sit and kick strategy</strong> has a slow start into an even pace then a strong finish.</li>
+                    <li>The <strong>negative split strategy</strong> has a slow start into a gradual speed increase until the end.</li>
+                    <li>The <strong>even pace strategy</strong> has no significant speed variations; an even pace is kept for the entire race.</li>
                 </ul>
+            </ul>
             </p>
         </section>
         <section class="explanations-section">
@@ -63,8 +107,6 @@
             <h2>Plot Explanation</h2>
             <p id="positionsExplanation">Here we notice that Jakob Ingebrigtsen leads from 200m until 400m after which Timothy Cheruiyot overtakes him. Timothy then stays in the lead until 1300m after which Jakob overtakes him once more to win the race with a new Olympic record: 3:28.32. Cheruiyot's strategy would be considered front running, Ingebrigtsen's strategy corresponds to the sit and kick strategy, and Josh Kerr's strategy is a negative split strategy given his progressively faster pace.</p>
         </section>
-        
-        
     </main>
 
     <footer></footer>
@@ -99,7 +141,6 @@
                 button.textContent = 'Displayed Year: 2016';
             }
         }
-
 
         // Function to convert time string to seconds
         function timeStringToSeconds(timeString) {
