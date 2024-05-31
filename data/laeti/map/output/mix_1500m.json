@@ -1,0 +1,1102 @@
+[
+    {
+        "Country": "Algeria",
+        "Year": 1996,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Noureddine Morceli",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Algeria",
+        "Year": 2012,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Taoufik Makhloufi",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Algeria",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Taoufik Makhloufi",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Australia",
+        "Year": 1896,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Edwin Flack",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Australia",
+        "Year": 1956,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "John Landy"
+    },
+    {
+        "Country": "Australia",
+        "Year": 1960,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Herb Elliott",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Belgium",
+        "Year": 1976,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Ivo Van Damme",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Canada",
+        "Year": 1932,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Phil Edwards"
+    },
+    {
+        "Country": "Czechoslovakia",
+        "Year": 1964,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Josef Odlo\u017eil",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Finland",
+        "Year": 1924,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Paavo Nurmi",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Finland",
+        "Year": 1928,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": "Harri Larva",
+        "Silver Winner": null,
+        "Bronze Winner": "Eino Purje"
+    },
+    {
+        "Country": "Finland",
+        "Year": 1972,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Pekka Vasala",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "France",
+        "Year": 1896,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Albin Lermusiaux"
+    },
+    {
+        "Country": "France",
+        "Year": 1900,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Henri Deloge",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "France",
+        "Year": 1928,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Jules Ladoum\u00e8gue",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "France",
+        "Year": 1960,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Michel Jazy",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "France",
+        "Year": 2008,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Mehdi Baala"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1952,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Werner Lueg"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1956,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Klaus Richtzenhain",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1968,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Bodo T\u00fcmmler"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1976,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Paul-Heinz Wellmann"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1980,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "J\u00fcrgen Straub",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1988,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Jens-Peter Herold"
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1900,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Charles Bennett",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1908,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Harold Wilson",
+        "Bronze Winner": "Norman Hallows"
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1912,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Arnold Jackson",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1920,
+        "Gold count": 1,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": "Albert Hill",
+        "Silver Winner": "Philip Baker",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1924,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "H. B. Stallard"
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1932,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Jerry Cornes",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1980,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": "Sebastian Coe",
+        "Silver Winner": null,
+        "Bronze Winner": "Steve Ovett"
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1984,
+        "Gold count": 1,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": "Sebastian Coe",
+        "Silver Winner": "Steve Cram",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 1988,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Peter Elliott",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Josh Kerr"
+    },
+    {
+        "Country": "Hungary",
+        "Year": 1960,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Istv\u00e1n R\u00f3zsav\u00f6lgyi"
+    },
+    {
+        "Country": "Ireland",
+        "Year": 1956,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Ron Delany",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Italy",
+        "Year": 1932,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Luigi Beccali",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Italy",
+        "Year": 1936,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Luigi Beccali"
+    },
+    {
+        "Country": "Kenya",
+        "Year": 1968,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Kipchoge Keino",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Kipchoge Keino",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 1988,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Peter Rono",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Stephen Kipkorir"
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2000,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": "Noah Ngeny",
+        "Silver Winner": null,
+        "Bronze Winner": "Bernard Lagat"
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Bernard Lagat",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2008,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Asbel Kiprop",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Timothy Cheruiyot",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Luxembourg",
+        "Year": 1952,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Josy Barthel",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Morocco",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Rachid El Basir",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Morocco",
+        "Year": 2000,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Hicham El Guerrouj",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Morocco",
+        "Year": 2004,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Hicham El Guerrouj",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Morocco",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Abdalaati Iguider"
+    },
+    {
+        "Country": "Netherlands",
+        "Year": 1948,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Willem Slijkhuis"
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 1936,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Jack Lovelock",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 1964,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": "Peter Snell",
+        "Silver Winner": null,
+        "Bronze Winner": "John Davies"
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Rod Dixon"
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 1976,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "John Walker",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 2008,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Nick Willis",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "New Zealand",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Nick Willis"
+    },
+    {
+        "Country": "Norway",
+        "Year": 2020,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Jakob Ingebrigtsen",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Portugal",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Rui Silva"
+    },
+    {
+        "Country": "Qatar",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Mohamed Suleiman"
+    },
+    {
+        "Country": "Spain",
+        "Year": 1984,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Jos\u00e9 Manuel Abascal"
+    },
+    {
+        "Country": "Spain",
+        "Year": 1992,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Ferm\u00edn Cacho",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Spain",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Ferm\u00edn Cacho",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Sweden",
+        "Year": 1948,
+        "Gold count": 1,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": "Henry Eriksson",
+        "Silver Winner": "Lennart Strand",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Switzerland",
+        "Year": 1924,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Willy Sch\u00e4rer",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 1896,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Arthur Blake",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 1900,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "John Bray"
+    },
+    {
+        "Country": "United States",
+        "Year": 1904,
+        "Gold count": 1,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": "Jim Lightbody",
+        "Silver Winner": "Frank Verner",
+        "Bronze Winner": "Lacey Hearn"
+    },
+    {
+        "Country": "United States",
+        "Year": 1908,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Mel Sheppard",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 1912,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Abel Kiviat",
+        "Bronze Winner": "Norman Taber"
+    },
+    {
+        "Country": "United States",
+        "Year": 1920,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Lawrence Shields"
+    },
+    {
+        "Country": "United States",
+        "Year": 1936,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Glenn Cunningham",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 1952,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Bob McMillen",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 1968,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Jim Ryun",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Leonel Manzano",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 2016,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Matthew Centrowitz Jr.",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Algeria",
+        "Year": 1992,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Hassiba Boulmerka",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Algeria",
+        "Year": 2000,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Nouria M\u00e9rah-Benida",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Austria",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Theresia Kiesl"
+    },
+    {
+        "Country": "Bahrain",
+        "Year": 2012,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Maryam Yusuf Jamal",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "China",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Qu Yunxia"
+    },
+    {
+        "Country": "Ethiopia",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Abeba Aregawi"
+    },
+    {
+        "Country": "Ethiopia",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Genzebe Dibaba",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Gunhild Hoffmeister",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1976,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Gunhild Hoffmeister",
+        "Bronze Winner": "Ulrike Klapezynski"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1980,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Christiane Wartenberg",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 2004,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Kelly Holmes",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Laura Muir",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Italy",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Paola Pigni"
+    },
+    {
+        "Country": "Italy",
+        "Year": 1984,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Gabriella Dorio",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2008,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Nancy Langat",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2016,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Faith Kipyegon",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2020,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Faith Kipyegon",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Netherlands",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Sifan Hassan"
+    },
+    {
+        "Country": "Romania",
+        "Year": 1984,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Doina Melinte",
+        "Bronze Winner": "Maricica Puic\u0103"
+    },
+    {
+        "Country": "Romania",
+        "Year": 1988,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Paula Ivan",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Romania",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Gabriela Szabo",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Romania",
+        "Year": 2000,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Violeta Szekely",
+        "Bronze Winner": "Gabriela Szabo"
+    },
+    {
+        "Country": "Romania",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Maria Cioncan"
+    },
+    {
+        "Country": "Russia",
+        "Year": 1972,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Lyudmila Bragina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1976,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Tatyana Kazankina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1980,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Tatyana Kazankina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1988,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Laimut\u0117 Baikauskait\u0117",
+        "Bronze Winner": "Tetyana Samolenko"
+    },
+    {
+        "Country": "Russia",
+        "Year": 1996,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Svetlana Masterkova",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Tatyana Tomashova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Tatyana Tomashova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Soviet Union",
+        "Year": 1980,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Nadiya Olizarenko"
+    },
+    {
+        "Country": "Ukraine",
+        "Year": 2008,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Iryna Lishchynska",
+        "Bronze Winner": "Nataliya Tobias"
+    },
+    {
+        "Country": "Unified Team",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Lyudmila Rogachova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Jennifer Simpson"
+    }
+]

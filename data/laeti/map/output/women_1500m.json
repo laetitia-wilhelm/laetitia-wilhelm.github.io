@@ -1,0 +1,342 @@
+[
+    {
+        "Country": "Algeria",
+        "Year": 1992,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Hassiba Boulmerka",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Algeria",
+        "Year": 2000,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Nouria M\u00e9rah-Benida",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Austria",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Theresia Kiesl"
+    },
+    {
+        "Country": "Bahrain",
+        "Year": 2012,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Maryam Yusuf Jamal",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "China",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Qu Yunxia"
+    },
+    {
+        "Country": "Ethiopia",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Abeba Aregawi"
+    },
+    {
+        "Country": "Ethiopia",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Genzebe Dibaba",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Gunhild Hoffmeister",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Germany",
+        "Year": 1976,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Gunhild Hoffmeister",
+        "Bronze Winner": "Ulrike Klapezynski"
+    },
+    {
+        "Country": "Germany",
+        "Year": 1980,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Christiane Wartenberg",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 2004,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Kelly Holmes",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Great Britain",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Laura Muir",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Italy",
+        "Year": 1972,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Paola Pigni"
+    },
+    {
+        "Country": "Italy",
+        "Year": 1984,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Gabriella Dorio",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2008,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Nancy Langat",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2016,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Faith Kipyegon",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Kenya",
+        "Year": 2020,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Faith Kipyegon",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Netherlands",
+        "Year": 2020,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Sifan Hassan"
+    },
+    {
+        "Country": "Romania",
+        "Year": 1984,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Doina Melinte",
+        "Bronze Winner": "Maricica Puic\u0103"
+    },
+    {
+        "Country": "Romania",
+        "Year": 1988,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Paula Ivan",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Romania",
+        "Year": 1996,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Gabriela Szabo",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Romania",
+        "Year": 2000,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Violeta Szekely",
+        "Bronze Winner": "Gabriela Szabo"
+    },
+    {
+        "Country": "Romania",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Maria Cioncan"
+    },
+    {
+        "Country": "Russia",
+        "Year": 1972,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Lyudmila Bragina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1976,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Tatyana Kazankina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1980,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Tatyana Kazankina",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 1988,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Laimut\u0117 Baikauskait\u0117",
+        "Bronze Winner": "Tetyana Samolenko"
+    },
+    {
+        "Country": "Russia",
+        "Year": 1996,
+        "Gold count": 1,
+        "Silver count": 0,
+        "Bronze count": 0,
+        "Gold Winner": "Svetlana Masterkova",
+        "Silver Winner": null,
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 2004,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Tatyana Tomashova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Russia",
+        "Year": 2012,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Tatyana Tomashova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "Soviet Union",
+        "Year": 1980,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Nadiya Olizarenko"
+    },
+    {
+        "Country": "Ukraine",
+        "Year": 2008,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": "Iryna Lishchynska",
+        "Bronze Winner": "Nataliya Tobias"
+    },
+    {
+        "Country": "Unified Team",
+        "Year": 1992,
+        "Gold count": 0,
+        "Silver count": 1,
+        "Bronze count": 0,
+        "Gold Winner": null,
+        "Silver Winner": "Lyudmila Rogachova",
+        "Bronze Winner": null
+    },
+    {
+        "Country": "United States",
+        "Year": 2016,
+        "Gold count": 0,
+        "Silver count": 0,
+        "Bronze count": 1,
+        "Gold Winner": null,
+        "Silver Winner": null,
+        "Bronze Winner": "Jennifer Simpson"
+    }
+]
