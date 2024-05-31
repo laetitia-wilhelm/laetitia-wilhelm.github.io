@@ -8,18 +8,15 @@
 
 ## Welcome to our website
 
-Welcome to our website, where we explore the thrilling world of 1500m Olympic races through dynamic and insightful visualizations. Here, you'll find a range of interactive tools and graphics designed make your knowledge about race strategies, global medal distributions, and performance trends over time grow.
+Welcome to our website, where we explore the thrilling world of 1500m Olympic races through dynamic visualizations. Here, you'll find a range of interactive tools designed to gain more knowledge about race strategies, global medal distributions, and performance trends over time.
 
 
 **Analyzing Race Strategies via Split Times**
-We propose to investigate the various race strategies employed by athletes by analyzing their split times. This visualization will allow users to interact with the data, revealing how different strategies unfold throughout the race. By categorizing tactics such as "sit and kick," "negative split," "front running," and "even pace," viewers will gain insights into the strengths and weaknesses of each approach and the contexts in which they succeed or fail.
+We propose to investigate the various race strategies employed by athletes by analyzing their split times. This visualization will allow users to interact with the data, presenting how different strategies unfold throughout the race. By categorizing tactics such as "sit and kick," "negative split," "front running," and "even pace," viewers will gain insights into the strengths and weaknesses of each approach and the contexts in which they succeed or fail.
 
 **World Map Medal**
 The world medal visualization presents a map with the distribution of Olympic medals won in running disciplines across the world.
-It uses dynamic and interactive tools, to enable the users to explore each country's medal detail in a ludic way. By clicking on a country, viewers can access to the medal distribution between the disciplines, including their types. This tool provides a global perspective of countries perfomance in Olympic races.
-
-The second visualization present the history of medals won by each country in the 1500m discipline. The user can interact with the graph to see the winner's name.
-
+It uses interactive tools, to enable the users to explore each country's medal detail in a ludic way. By clicking on a country, viewers can access to the medal distribution between the disciplines, including their types. This tool provides a global perspective of countries perfomance in Olympic races. The second visualization present the history of medals won by each country in the 1500m discipline. The user can interact with the graph to see the winner's name.
 
 
 **Top-14 Countries Race Times as a Time-Series Bar Chart**
@@ -42,6 +39,7 @@ Our [website](https://laetitia-wilhelm.github.io/index.html) is structured the f
 ├── race_strategies.html
 ├── world_medals.html
 ├── team.html
+├── style.css  <-- main style
 ├── data/
     ├── elisa/ <-- country times data
     └──  laeti/ <-- map & news data
@@ -53,4 +51,8 @@ Our [website](https://laetitia-wilhelm.github.io/index.html) is structured the f
     ├── histogram.js <-- Medal History
     ├── Map_wo_hist.js <-- Medal Map
     └──  tableTransition.js <-- Home news
+└── style/
+    ├── countdown.css
+    ├── elisa_style.css
+    └── table.css 
 ```
