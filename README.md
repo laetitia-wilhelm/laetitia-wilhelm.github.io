@@ -22,8 +22,8 @@ The second visualization present the history of medals won by each country in th
 
 
 
-**Top-k Countries Race Times as a Time-Series Bar Chart**
-We propose to visualize the performance trends of the top-performing countries through a time-series bar chart. This chart will depict the chronometric performance of athletes over various Olympic events, highlighting patterns and fluctuations in race times. By examining these trends, users will be able to identify how different countries' performances have evolved, providing a detailed temporal analysis of the sport.
+**Top-14 Countries Race Times as a Time-Series Bar Chart**
+We propose to visualize the performance trends of the top-performing countries through a time-series bar chart. This chart will depict the chronometric performance of athletes over Olympic events throughout the century, highlighting patterns and fluctuations in race times. By examining these trends, users will be able to identify how different countries' performances have evolved, providing a temporal analysis of the sport.
 
 
 
